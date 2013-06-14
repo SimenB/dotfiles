@@ -4,4 +4,6 @@ if [ -f C:/git-completion.bash ]; then
     . C:/git-completion.bash
 fi
 
-. C:/maven_bash_completion.bash
+if [ -f C:/maven_bash_completion.bash ]; then
+    . C:/maven_bash_completion.bash
+fi

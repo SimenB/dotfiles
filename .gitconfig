@@ -74,7 +74,7 @@
 	panic			= !tar cvf ../git_panic.tar * --exclude='target/*' --exclude='*.class'
 	wdiff			= diff --word-diff=plain
 
-	la			= !grep '\t=' ~/.gitconfigs
+	la			= !grep '\t=' ~/.gitconfig
 	#la			= "!grep '\t=' ~/.gitconfig | sed -e 's/=/^[[0;31m=^[[0m/g' | sed -e 's/#.*/^[[0;32m&^[[0m/g'"
 	ignored			= ls-files --others -i --exclude-standard
 	purr			= pull --rebase
@@ -85,8 +85,9 @@
 	rb			= "!f() { git rebase HEAD~$1 -i; }; f"
 	rbs			= "!f() { git stash && git rb $1 && git stash pop; }; f"
 	amend 			= !git log -n 1 --pretty=tformat:%s%n%n%b | git commit -F - --amend
+	amenda 			= !git add . && git amend
 	fetchall		= fetch --all --verbose --prune
-	standup			= !git log --since yesterday --author "\"$(git config user.name)"\"  --oneline
+	standup			= !$HOME/gitstandup.sh
 	week			= !git log --since="\"1 week ago\"" --author "\"$(git config user.name)"\" --oneline
 	update			= "!f() { export tmp_branch=`git branch | grep '* ' | tr -d '* '` && git stash && git checkout $1 && git pull && git checkout $tmp_branch && git stash pop; unset tmp_branch; }; f"
 	move-to			= "!f() { git stash && git checkout $1 && git stash pop; }; f"
