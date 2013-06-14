@@ -20,15 +20,16 @@
 	ui = auto
 
 [color "branch"]
-	current = red reverse
-	local = blue
-	remote = green
+	current = cyan reverse
+	local = yellow
+	remote = magenta
 
 [color "diff"]
 	meta = yellow bold
 	frag = magenta bold
 	old = red bold
 	new = green bold
+	whitespace = white reverse
 
 [color "status"]
 	added = yellow
@@ -69,12 +70,12 @@
 	wipe			= reset --hard HEAD
 	wipes			= reset --hard origin/HEAD
 	log-fancy		= log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(cyan)<%an>%Creset' --abbrev-commit --date=relative --branches
-	nice			= log --graph --decorate --pretty=oneline --abbrev-commit --date=relative
+	nice			= log --graph --decorate --pretty=oneline --abbrev-commit --branches
 	panic			= !tar cvf ../git_panic.tar * --exclude='target/*' --exclude='*.class'
 	wdiff			= diff --word-diff=plain
 
-	la			= !grep '\t=' ~/.gitconfig | less
-	#la			= "!grep '\t=' ~/.gitconfig | sed -e 's/=/^[[0;31m=^[[0m/g' | sed -e 's/#.*/^[[0;32m&^[[0m/g' | less -R"
+	la			= !grep '\t=' ~/.gitconfigs
+	#la			= "!grep '\t=' ~/.gitconfig | sed -e 's/=/^[[0;31m=^[[0m/g' | sed -e 's/#.*/^[[0;32m&^[[0m/g'"
 	ignored			= ls-files --others -i --exclude-standard
 	purr			= pull --rebase
 	purrs			= !git stash && git purr && git stash pop
@@ -85,8 +86,8 @@
 	rbs			= "!f() { git stash && git rb $1 && git stash pop; }; f"
 	amend 			= !git log -n 1 --pretty=tformat:%s%n%n%b | git commit -F - --amend
 	fetchall		= fetch --all --verbose --prune
-	standup			= !git log --since yesterday --author "\"$(git config user.name)"\" --decorate  --oneline
-	week			= !git log --since="\"1 week ago\"" --author "\"$(git config user.name)"\" --decorate  --oneline
+	standup			= !git log --since yesterday --author "\"$(git config user.name)"\"  --oneline
+	week			= !git log --since="\"1 week ago\"" --author "\"$(git config user.name)"\" --oneline
 	update			= "!f() { export tmp_branch=`git branch | grep '* ' | tr -d '* '` && git stash && git checkout $1 && git pull && git checkout $tmp_branch && git stash pop; unset tmp_branch; }; f"
 	move-to			= "!f() { git stash && git checkout $1 && git stash pop; }; f"
 	merge-to		= "!f() { export tmp_branch=`git branch | grep '* ' | tr -d '* '` && git stash && git checkout $1 && git merge $tmp_branch && git checkout $tmp_branch && git stash pop; unset tmp_branch; }; f"
