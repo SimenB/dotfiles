@@ -70,7 +70,7 @@
 	wipe			= reset --hard HEAD
 	wipes			= reset --hard origin/HEAD
 	log-fancy		= log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(cyan)<%an>%Creset' --abbrev-commit --date=relative --branches
-	nice			= log --graph --decorate --pretty=oneline --abbrev-commit --branches
+	nice			= log --graph --decorate --oneline --branches
 	panic			= !tar cvf ../git_panic.tar * --exclude='target/*' --exclude='*.class'
 	wdiff			= diff --word-diff=plain
 
@@ -95,3 +95,4 @@
 	merge-from		= "!f() { export tmp_branch=`git branch | grep '* ' | tr -d '* '` && git stash && git checkout $1 && git pull && git checkout $tmp_branch && git merge $1 && git stash pop; unset tmp_branch; }; f"
 	commits-since		= shortlog -sn --no-merges --since
 	commits-on-since	= "!f() { export tmp_branch=`git branch | grep '* ' | tr -d '* '` && git checkout $1 && git commits-since $2 && git checkout $tmp_branch;  unset tmp_branch; }; f"
+	my-commits-since	= !git log --author "\"$(git config user.name)"\" --oneline --since
