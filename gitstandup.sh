@@ -8,4 +8,4 @@ function yesterworkday()
     fi
 }
 
-git log --since "$(yesterworkday)" --author "$(git config user.name)" --oneline
+git log --no-merges --since "$(yesterworkday)" --author "$(git config user.name)" --oneline
