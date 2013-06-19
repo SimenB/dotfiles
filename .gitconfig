@@ -66,6 +66,7 @@
 	co			= checkout
 	st			= status
 	di			= diff
+	diw			= diff -w
 	ds			= diff --staged
 	wipe			= reset --hard HEAD
 	wipes			= reset --hard origin/HEAD
