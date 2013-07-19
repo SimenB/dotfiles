@@ -88,6 +88,7 @@
 	amend 			= !git log -n 1 --pretty=tformat:%s%n%n%b | git commit -F - --amend
 	amenda 			= !git add . && git amend
 	fetchall		= fetch --all --verbose --prune
+    del-branch      = "!f() { git push origin :$1; }; f"
 	standup			= !$HOME/gitstandup.sh
 	week			= !git log --no-merges --since="\"1 week ago\"" --author "\"$(git config user.name)"\" --oneline --all
 	this-week		= !git log --no-merges --since="\"last monday\"" --author "\"$(git config user.name)"\" --oneline --all
