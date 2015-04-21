@@ -7,3 +7,5 @@ fi
 if [ -f C:/maven_bash_completion.bash ]; then
     . C:/maven_bash_completion.bash
 fi
+
+alias npm-pack-info='tarball="$(npm pack .)"; wc -c "${tarball}"; tar tvf "${tarball}"; rm "${tarball}";'
