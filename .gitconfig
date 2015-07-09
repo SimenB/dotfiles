@@ -3,15 +3,10 @@
 	email = sbekkhus91@gmail.com
 
 [core]
-	editor = \"C:/Program Files (x86)/GitExtensions/GitExtensions.exe\" fileeditor
 	ignorecase = false
-	autocrlf = true
 
 [http]
 	sslVerify = false
-
-[credential]
-	helper = !"$APPDATA/GitCredStore/git-credential-winstore.exe"
 
 [color]
 	branch = auto
@@ -47,16 +42,6 @@
 
 [diff]
 	mnemonicprefix = true
-	guitool = kdiff3
-
-[difftool "kdiff3"]
-	path = C:/Program Files/KDiff3/kdiff3.exe
-
-[merge]
-	tool = kdiff3
-
-[mergetool "kdiff3"]
-	path = C:/Program Files/KDiff3/kdiff3.exe
 
 [rerere]
 	enabled = true
@@ -88,7 +73,7 @@
 	amend 			= !git log -n 1 --pretty=tformat:%s%n%n%b | git commit -F - --amend
 	amenda 			= !git add . && git amend
 	fetchall		= fetch --all --verbose --prune
-    del-branch      = "!f() { git push origin :$1; }; f"
+	del-branch		= "!f() { git push origin :$1; }; f"
 	standup			= !$HOME/gitstandup.sh
 	week			= !git log --no-merges --since="\"1 week ago\"" --author "\"$(git config user.name)"\" --oneline --all
 	this-week		= !git log --no-merges --since="\"last monday\"" --author "\"$(git config user.name)"\" --oneline --all
