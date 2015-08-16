@@ -3,13 +3,32 @@
 
 [core]
 	ignorecase = false
+	# Avoid some useless, OS-specific files
 	excludesfile = ~/.gitignore_global
+	# Should be vim...
 	editor = nano
 
+	# Treat spaces before tabs and all kinds of trailing whitespace as an error
+	whitespace = space-before-tab,-indent-with-non-tab,trailing-space
+
+	# Make `git rebase` safer on OS X
+	# More info: <http://www.git-tower.com/blog/make-git-rebase-safe-on-osx/>
+	trustctime = false
+
+	# Prevent showing files whose names contain non-ASCII symbols as unversioned.
+	# http://michael-kuehnel.de/git/2014/11/21/git-mac-osx-and-german-umlaute.html
+	precomposeunicode = false
+
 [include]
-  path = ~/.gitconfig_local
+	# Get environment-specific stuff, like email or github tokens
+	path = ~/.gitconfig_local
+
+[apply]
+	# Detect whitespace errors when applying a patch
+	whitespace = fix
 
 [http]
+	# Screw security, amirite?
 	sslVerify = false
 
 [color]
@@ -48,6 +67,8 @@
 	mnemonicprefix = true
 
 [rerere]
+	# A must when rebasing
+	# Stands for "remember recorded resolution"
 	enabled = true
 
 [alias]
