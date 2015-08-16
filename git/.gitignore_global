@@ -1,0 +1,7 @@
+.DS\_Store
+*.sw?
+*~
+Desktop.ini
+._*
+Thumbs.db
+.Trashes
