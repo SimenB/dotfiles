@@ -1,11 +1,13 @@
 [user]
 	name = Simen Bekkhus
-	email = sbekkhus91@gmail.com
 
 [core]
 	ignorecase = false
 	excludesfile = ~/.gitignore_global
 	editor = nano
+
+[include]
+  path = ~/.gitconfig_local
 
 [http]
 	sslVerify = false
