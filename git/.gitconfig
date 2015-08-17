@@ -19,6 +19,10 @@
 	# http://michael-kuehnel.de/git/2014/11/21/git-mac-osx-and-german-umlaute.html
 	precomposeunicode = false
 
+[credential]
+	# Cache password when using https
+	helper = cache --timeout=3600
+
 [include]
 	# Get environment-specific stuff, like email or github tokens
 	path = ~/.gitconfig_local
