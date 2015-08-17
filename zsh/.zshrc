@@ -60,6 +60,7 @@ elif [ "$(expr substr $(uname -s) 1 5)" = "Linux" ]; then
 fi
 
 alias ccat="pygmentize -g"
+export PATH=${PATH}:~/.scripts
 
 export JBOSS_HOME=/usr/local/opt/wildfly-as/libexec
 export PATH=${PATH}:${JBOSS_HOME}/bin
