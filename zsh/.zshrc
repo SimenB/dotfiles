@@ -61,6 +61,7 @@ fi
 
 alias ccat="pygmentize -g"
 export PATH=${PATH}:~/.scripts
+export PATH=${PATH}:~/npm/bin
 
 export JBOSS_HOME=/usr/local/opt/wildfly-as/libexec
 export PATH=${PATH}:${JBOSS_HOME}/bin
