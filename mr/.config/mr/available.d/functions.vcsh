@@ -1,2 +1,2 @@
 [$HOME/.config/vcsh/repo.d/functions.git]
-checkout = vcsh clone git@github.com:SimenB/vcsh_functions.git .functions
+checkout = vcsh clone git@github.com:SimenB/vcsh_functions.git functions
