@@ -1,7 +1,17 @@
-" Use the Solarized Dark theme
-set background=dark
-colorscheme solarized
-let g:solarized_termtrans=1
+" make sure plug is installed
+if empty(glob('~/.vim/autoload/plug.vim'))
+  silent !curl -fLo ~/.vim/autoload/plug.vim --create-dirs
+    \ https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+  autocmd VimEnter * PlugInstall
+endif
+
+" Start plug
+call plug#begin()
+Plug 'trusktr/seti.vim'
+call plug#end()
+
+" use seti colorscheme
+colorscheme seti
 
 " Make Vim more useful
 set nocompatible
