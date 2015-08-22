@@ -8,6 +8,13 @@ endif
 " Start plug
 call plug#begin()
 Plug 'trusktr/seti.vim'
+Plug 'bling/vim-airline'
+Plug 'kien/ctrlp.vim'
+Plug 'scrooloose/nerdtree', { 'on': 'NERDTreeToggle' }
+Plug 'scrooloose/syntastic'
+Plug 'rking/ag.vim'
+Plug 'airblade/vim-gitgutter'
+Plug 'edkolev/tmuxline.vim'
 call plug#end()
 
 " use seti colorscheme
@@ -114,3 +121,14 @@ if has("autocmd")
 	" Treat .md files as Markdown
 	autocmd BufNewFile,BufRead *.md setlocal filetype=markdown
 endif
+
+let g:airline_powerline_fonts = 1
+
+set statusline+=%#warningmsg#
+set statusline+=%{SyntasticStatuslineFlag()}
+set statusline+=%*
+
+let g:syntastic_always_populate_loc_list = 1
+let g:syntastic_auto_loc_list = 1
+let g:syntastic_check_on_open = 1
+let g:syntastic_check_on_wq = 0
