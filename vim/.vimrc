@@ -1,3 +1,9 @@
+function! BuildYCM(info)
+  if a:info.status == 'installed' || a:info.force
+    !./install.sh
+  endif
+endfunction
+
 " make sure plug is installed
 if empty(glob('~/.vim/autoload/plug.vim'))
   silent !curl -fLo ~/.vim/autoload/plug.vim --create-dirs
@@ -15,6 +21,15 @@ Plug 'scrooloose/syntastic'
 Plug 'rking/ag.vim'
 Plug 'airblade/vim-gitgutter'
 Plug 'edkolev/tmuxline.vim'
+Plug 'tpope/vim-fugitive'
+Plug 'editorconfig/editorconfig-vim'
+Plug 'Valloric/YouCompleteMe', { 'do': function('BuildYCM') }
+Plug 'mxw/vim-jsx'
+Plug 'mattn/emmet-vim', { 'for': 'html' }
+Plug 'mustache/vim-mustache-handlebars'
+Plug 'sickill/vim-pasta' 
+Plug 'regedarek/ZoomWin'
+Plug 'tomtom/tcomment_vim'
 call plug#end()
 
 " use seti colorscheme
@@ -132,3 +147,17 @@ let g:syntastic_always_populate_loc_list = 1
 let g:syntastic_auto_loc_list = 1
 let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 0
+let g:jsx_ext_required = 0 " Allow JSX in normal JS files
+
+" let js_linters = []
+"
+" if syntastic#util#findFileInParent('.eslintrc', expand('%:p:h', 1)) !=# ''
+" 	call extend(js_linters, 'eslint')
+" endif
+
+" if syntastic#util#findFileInParent('.jscsrc', expand('%:p:h', 1)) !=# ''
+" 	call extend(js_linters, 'jscs')
+" endif
+
+" autocmd FileType javascript let b:syntastic_checkers = js_linters
+autocmd FileType javascript let b:syntastic_checkers = ['eslint', 'jscs']
