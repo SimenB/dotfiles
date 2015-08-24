@@ -22,7 +22,7 @@ HIST_STAMPS="dd.mm.yyyy"
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(git git-flow z sudo battery android brew node npm mvn zsh-syntax-highlighting history-substring-search gradle)
 
-export PATH="/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin"
+export PATH="/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:$PATH"
 export MANPATH="/usr/local/man:$MANPATH"
 
 source $ZSH/oh-my-zsh.sh
@@ -69,3 +69,5 @@ export PATH=${PATH}:${JBOSS_HOME}/bin
 alias idea='nocorrect idea'
 alias vcsh='nocorrect vcsh'
 alias config='nocorrect config'
+
+export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
