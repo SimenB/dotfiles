@@ -114,3 +114,5 @@
 	my-commits-since	= !git log --no-merges --author "\"$(git config user.name)"\" --oneline --all --since
 	add-upstream		= remote add upstream
 	force-pop		= !git stash show -p | git apply && git stash drop
+[git-up "fetch"]
+	all = true
