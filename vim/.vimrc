@@ -1,3 +1,7 @@
+if $COLORTERM == 'gnome-terminal'
+  set t_Co=256
+endif
+
 function! BuildYCM(info)
   if a:info.status == 'installed' || a:info.force
     !./install.sh
