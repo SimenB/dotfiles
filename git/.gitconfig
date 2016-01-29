@@ -98,6 +98,8 @@
 	s			= status -sb
 	rb			= "!f() { git rebase HEAD~$1 -i; }; f"
 	rbs			= "!f() { git stash && git rb $1 && git stash pop; }; f"
+	remas			= !git fetchall && git rebase origin/master
+	redev			= !git fetchall && git rebase origin/develop
 	amend			= !git log -n 1 --pretty=tformat:%s%n%n%b | git commit -F - --amend
 	amenda			= !git add . && git amend
 	fetchall		= fetch --all --verbose --prune
