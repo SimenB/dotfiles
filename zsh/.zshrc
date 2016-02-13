@@ -41,7 +41,7 @@ export LANG=en_US.UTF-8
 
 alias npm-pack-info='tarball="$(npm pack .)"; wc -c "${tarball}"; tar tvf "${tarball}"; rm "${tarball}";'
 
-export EDITOR='nano'
+export EDITOR='vim'
 
 # Setup zsh-autosuggestions
 [ -s $HOME/.zsh-autosuggestions/autosuggestions.zsh ] && source $HOME/.zsh-autosuggestions/autosuggestions.zsh
