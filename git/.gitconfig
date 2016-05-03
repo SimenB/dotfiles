@@ -1,6 +1,3 @@
-[user]
-	name = Simen Bekkhus
-
 [core]
 	ignorecase = false
 	# Avoid some useless, OS-specific files
