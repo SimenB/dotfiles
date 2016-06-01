@@ -115,6 +115,6 @@
 	add-upstream		= remote add upstream
 	force-pop		= !git stash show -p | git apply && git stash drop
 	satsh			= stash
-	githubprofile		= !git config user.name \"Simen Bekkhus\" && git config user.email \"sbekkhus91@gmail.com\"
+	githubprofile		= !git config user.name \"Simen Bekkhus\" && git config user.email \"sbekkhus91@gmail.com\" && git config commit.gpgsign true
 [git-up "fetch"]
 	all = true
