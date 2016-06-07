@@ -31,9 +31,10 @@ Plug 'Valloric/YouCompleteMe', { 'do': function('BuildYCM') }
 Plug 'mxw/vim-jsx'
 Plug 'mattn/emmet-vim', { 'for': 'html' }
 Plug 'mustache/vim-mustache-handlebars'
-Plug 'sickill/vim-pasta' 
+Plug 'sickill/vim-pasta'
 Plug 'regedarek/ZoomWin'
 Plug 'tomtom/tcomment_vim'
+Plug 'tmux-plugins/vim-tmux-focus-events'
 call plug#end()
 
 " use seti colorscheme
