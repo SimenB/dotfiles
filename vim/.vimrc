@@ -1,18 +1,18 @@
 if $COLORTERM == 'gnome-terminal'
-  set t_Co=256
+	set t_Co=256
 endif
 
 function! BuildYCM(info)
-  if a:info.status == 'installed' || a:info.force
-    !./install.py --clang-completer
-  endif
+	if a:info.status == 'installed' || a:info.force
+		!./install.py --clang-completer
+	endif
 endfunction
 
 " make sure plug is installed
 if empty(glob('~/.vim/autoload/plug.vim'))
-  silent !curl -fLo ~/.vim/autoload/plug.vim --create-dirs
-    \ https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
-  autocmd VimEnter * PlugInstall
+	silent !curl -fLo ~/.vim/autoload/plug.vim --create-dirs
+		\ https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+	autocmd VimEnter * PlugInstall
 endif
 
 " Start plug
