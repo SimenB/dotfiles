@@ -118,3 +118,5 @@
 	githubprofile		= !git config user.name \"Simen Bekkhus\" && git config user.email \"sbekkhus91@gmail.com\" && git config commit.gpgsign true
 [git-up "fetch"]
 	all = true
+[rebase]
+	autoStash = true
