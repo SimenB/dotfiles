@@ -20,7 +20,7 @@ COMPLETION_WAITING_DOTS="true"
 HIST_STAMPS="dd.mm.yyyy"
 
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git git-flow z sudo battery android brew node npm mvn zsh-syntax-highlighting history-substring-search gradle)
+plugins=(git z sudo brew npm mvn zsh-syntax-highlighting history-substring-search)
 
 export PATH="/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:$PATH"
 export MANPATH="/usr/local/man:$MANPATH"
