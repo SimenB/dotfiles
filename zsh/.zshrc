@@ -72,3 +72,7 @@ alias vcsh='nocorrect vcsh'
 alias config='nocorrect config'
 
 export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
+
+# If a space is added before the command, don't add it to history
+# Useful if you enter your password in a command
+setopt HIST_IGNORE_SPACE
