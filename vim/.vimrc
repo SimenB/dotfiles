@@ -2,12 +2,6 @@ if $COLORTERM == 'gnome-terminal'
 	set t_Co=256
 endif
 
-function! BuildYCM(info)
-	if a:info.status == 'installed' || a:info.force
-		!./install.py --clang-completer
-	endif
-endfunction
-
 " make sure plug is installed
 if empty(glob('~/.vim/autoload/plug.vim'))
 	silent !curl -fLo ~/.vim/autoload/plug.vim --create-dirs
@@ -27,7 +21,6 @@ Plug 'airblade/vim-gitgutter'
 Plug 'edkolev/tmuxline.vim'
 Plug 'tpope/vim-fugitive'
 Plug 'editorconfig/editorconfig-vim'
-Plug 'Valloric/YouCompleteMe', { 'do': function('BuildYCM') }
 Plug 'mxw/vim-jsx'
 Plug 'mattn/emmet-vim', { 'for': 'html' }
 Plug 'mustache/vim-mustache-handlebars'
