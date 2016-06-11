@@ -37,23 +37,6 @@
 	status = auto
 	ui = auto
 
-[color "branch"]
-	current = cyan reverse
-	local = yellow
-	remote = magenta
-
-[color "diff"]
-	meta = yellow bold
-	frag = magenta bold
-	old = red bold
-	new = green bold
-	whitespace = white reverse
-
-[color "status"]
-	added = yellow
-	changed = green
-	untracked = cyan
-
 [push]
 	default = upstream
 	followTags = true
