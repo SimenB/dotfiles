@@ -12,6 +12,7 @@ endif
 " Start plug
 call plug#begin()
 Plug 'trusktr/seti.vim'
+Plug 'tomasr/molokai'
 Plug 'bling/vim-airline'
 Plug 'kien/ctrlp.vim'
 Plug 'scrooloose/nerdtree', { 'on': 'NERDTreeToggle' }
@@ -30,8 +31,9 @@ Plug 'tomtom/tcomment_vim'
 Plug 'tmux-plugins/vim-tmux-focus-events'
 call plug#end()
 
-" use seti colorscheme
-colorscheme seti
+colorscheme molokai
+" Set background color of molokai to gray
+let g:molokai_original = 1
 
 " Make Vim more useful
 set nocompatible
