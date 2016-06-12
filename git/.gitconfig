@@ -72,8 +72,6 @@
 	la			= !grep '\t=' ~/.gitconfig
 	#la			= "!grep '\t=' ~/.gitconfig | sed -e 's/=/^[[0;31m=^[[0m/g' | sed -e 's/#.*/^[[0;32m&^[[0m/g'"
 	ignored			= ls-files --others -i --exclude-standard
-	purr			= pull --rebase
-	purrs			= !git stash && git purr && git stash pop
 	ready			= rebase -i @{u}
 	logs			= log --oneline --decorate
 	s			= status -sb
