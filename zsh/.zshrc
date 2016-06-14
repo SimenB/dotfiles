@@ -50,14 +50,20 @@ export EDITOR='vim'
 export NVM_DIR=~/.nvm
 
 if [ "$(uname)" = "Darwin" ]; then
-  source $(brew --prefix nvm)/nvm.sh
+  function nvm() {
+    source $(brew --prefix nvm)/nvm.sh
+    nvm "$@"
+  }
   export CHROME_BIN="/opt/homebrew-cask/Caskroom/google-chrome/latest/Google Chrome.app/Contents/MacOS/Google Chrome"
   alias fuck='$(thefuck $(fc -ln -1))'
 elif [ "$(expr substr $(uname -s) 1 5)" = "Linux" ]; then
+  function nvm() {
     [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
-    alias fuck='eval $(thefuck $(fc -ln -1))'
+    nvm "$@"
+  }
+  alias fuck='eval $(thefuck $(fc -ln -1))'
 #elif [ "$(expr substr $(uname -s) 1 10)" = "MINGW32_NT" ]; then
-    # Do something under Windows NT platform
+  # Do something under Windows NT platform
 fi
 
 alias ccat="pygmentize -g"
