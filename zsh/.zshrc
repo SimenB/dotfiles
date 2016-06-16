@@ -42,7 +42,7 @@ if [ "$(uname)" = "Darwin" ]; then
     source $(brew --prefix nvm)/nvm.sh
     nvm "$@"
   }
-  export CHROME_BIN="/opt/homebrew-cask/Caskroom/google-chrome/latest/Google Chrome.app/Contents/MacOS/Google Chrome"
+  export CHROME_BIN="/usr/local/Caskroom/google-chrome/latest/Google Chrome.app/Contents/MacOS/Google Chrome"
   alias fuck='$(thefuck $(fc -ln -1))'
 elif [ "$(expr substr $(uname -s) 1 5)" = "Linux" ]; then
   function nvm() {
