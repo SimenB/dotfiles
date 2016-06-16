@@ -63,3 +63,5 @@ alias config='nocorrect config'
 # If a space is added before the command, don't add it to history
 # Useful if you enter your password in a command
 setopt HIST_IGNORE_SPACE
+
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
