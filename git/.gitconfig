@@ -76,7 +76,6 @@
 	standup			= !~/.scripts/gitstandup.sh
 	week			= !git log --no-merges --since="\"1 week ago\"" --author "\"$(git config user.name)"\" --oneline --all
 	this-week		= !git log --no-merges --since="\"last monday\"" --author "\"$(git config user.name)"\" --oneline --all
-	update			= "!f() { export tmp_branch=`git branch | grep '* ' | tr -d '* '` && git stash && git checkout $1 && git pull && git checkout $tmp_branch && git stash pop; unset tmp_branch; }; f"
 	move-to			= "!f() { git stash && git checkout $1 && git stash pop; }; f"
 	merge-to		= "!f() { export tmp_branch=`git branch | grep '* ' | tr -d '* '` && git stash && git checkout $1 && git merge $tmp_branch && git checkout $tmp_branch && git stash pop; unset tmp_branch; }; f"
 	merge-from		= "!f() { export tmp_branch=`git branch | grep '* ' | tr -d '* '` && git stash && git checkout $1 && git pull && git checkout $tmp_branch && git merge $1 && git stash pop; unset tmp_branch; }; f"
