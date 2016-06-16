@@ -1859,7 +1859,7 @@
 	<key>NoSyncTimeOfLastPromo</key>
 	<real>481186881.83174801</real>
 	<key>NoSyncTimeOfLastPromoDownload</key>
-	<real>487240567.71568698</real>
+	<real>487746490.05592197</real>
 	<key>OnlyWhenMoreTabs</key>
 	<true/>
 	<key>OpenArrangementAtStartup</key>
@@ -1922,9 +1922,9 @@
 	<key>SUHasLaunchedBefore</key>
 	<true/>
 	<key>SULastCheckTime</key>
-	<date>2016-06-11T12:41:42Z</date>
+	<date>2016-06-16T05:05:58Z</date>
 	<key>SUSkippedVersion</key>
-	<string>3.0.0</string>
+	<string>3.0.2</string>
 	<key>SavePasteHistory</key>
 	<false/>
 	<key>ShowBookmarkName</key>
