@@ -29,6 +29,7 @@ Plug 'sickill/vim-pasta'
 Plug 'regedarek/ZoomWin'
 Plug 'tomtom/tcomment_vim'
 Plug 'tmux-plugins/vim-tmux-focus-events'
+Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 call plug#end()
 
 colorscheme molokai
