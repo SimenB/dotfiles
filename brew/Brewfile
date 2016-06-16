@@ -21,6 +21,7 @@ brew 'maven'
 brew 'mr'
 brew 'nginx', args: ['with-http2']
 brew 'nvm'
+brew 'the_platinum_searcher'
 brew 'thefuck'
 brew 'tig'
 brew 'tmux'
