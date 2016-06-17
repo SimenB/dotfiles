@@ -65,13 +65,13 @@
 	ignored			= ls-files --others -i --exclude-standard
 	ready			= rebase -i @{u}
 	logs			= log --oneline --decorate
-	s			= status -sb
+	s			= !echo use gsb
 	rb			= "!f() { git rebase HEAD~$1 -i; }; f"
 	rbs			= "!f() { git stash && git rb $1 && git stash pop; }; f"
 	remas			= !git fetchall && git rebase origin/master
 	redev			= !git fetchall && git rebase origin/develop
-	amend			= !git log -n 1 --pretty=tformat:%s%n%n%b | git commit -F - --amend
-	amenda			= !git add . && git amend
+	amend			= !echo use gcn!
+	amenda			= !echo use gcan!
 	del-branch		= "!f() { git push origin :$1; }; f"
 	standup			= !~/.scripts/gitstandup.sh
 	week			= !git log --no-merges --since="\"1 week ago\"" --author "\"$(git config user.name)"\" --oneline --all
