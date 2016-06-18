@@ -54,6 +54,12 @@ elif [ "$(expr substr $(uname -s) 1 5)" = "Linux" ]; then
   # Do something under Windows NT platform
 fi
 
+function npm() {
+  nvm --version > /dev/null 2>&1
+  unset -f npm
+  npm "$@"
+}
+
 alias ccat="pygmentize -g"
 
 alias idea='nocorrect idea'
