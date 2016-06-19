@@ -23,7 +23,7 @@ source $ZSH/oh-my-zsh.sh
 if [[ -n $SSH_CONNECTION ]]; then
   export EDITOR='vim'
 else
-  export EDITOR='mvim'
+  export EDITOR='nvim'
 fi
 
 # ssh
@@ -65,6 +65,8 @@ alias ccat="pygmentize -g"
 alias idea='nocorrect idea'
 alias vcsh='nocorrect vcsh'
 alias config='nocorrect config'
+
+alias vim=nvim
 
 # If a space is added before the command, don't add it to history
 # Useful if you enter your password in a command
