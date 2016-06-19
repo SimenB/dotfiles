@@ -159,4 +159,4 @@ let g:jsx_ext_required = 0 " Allow JSX in normal JS files
 " endif
 
 " autocmd FileType javascript let b:syntastic_checkers = js_linters
-autocmd FileType javascript let b:syntastic_checkers = ['eslint', 'jscs']
+autocmd FileType javascript let b:syntastic_checkers = ['eslint']
