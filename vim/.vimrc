@@ -16,7 +16,7 @@ Plug 'tomasr/molokai'
 Plug 'bling/vim-airline'
 Plug 'kien/ctrlp.vim'
 Plug 'scrooloose/nerdtree', { 'on': 'NERDTreeToggle' }
-Plug 'scrooloose/syntastic'
+Plug 'neomake/neomake'
 Plug 'nazo/pt.vim'
 Plug 'airblade/vim-gitgutter'
 Plug 'edkolev/tmuxline.vim'
@@ -30,6 +30,7 @@ Plug 'regedarek/ZoomWin'
 Plug 'tomtom/tcomment_vim'
 Plug 'tmux-plugins/vim-tmux-focus-events'
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
+Plug 'jaawerth/nrun.vim'
 call plug#end()
 
 colorscheme molokai
@@ -134,29 +135,20 @@ if has("autocmd")
 	autocmd BufNewFile,BufRead *.json setfiletype json syntax=javascript
 	" Treat .md files as Markdown
 	autocmd BufNewFile,BufRead *.md setlocal filetype=markdown
+	" Run linting on every file save
+	autocmd! BufWritePost,BufEnter * Neomake
 endif
 
 let g:airline_powerline_fonts = 1
 
-set statusline+=%#warningmsg#
-set statusline+=%{SyntasticStatuslineFlag()}
-set statusline+=%*
+" TODO: Figure out what fits for NeoMake
+" set statusline+=%#warningmsg#
+" set statusline+=%{SyntasticStatuslineFlag()}
+" set statusline+=%*
 
-let g:syntastic_always_populate_loc_list = 1
-let g:syntastic_auto_loc_list = 1
-let g:syntastic_check_on_open = 1
-let g:syntastic_check_on_wq = 0
+let g:neomake_open_list = 2
+let b:neomake_javascript_eslint_exe = nrun#Which('eslint')
+let b:neomake_javascript_enabled_makers = ['eslint']
+
 let g:jsx_ext_required = 0 " Allow JSX in normal JS files
 
-" let js_linters = []
-"
-" if syntastic#util#findFileInParent('.eslintrc', expand('%:p:h', 1)) !=# ''
-" 	call extend(js_linters, 'eslint')
-" endif
-
-" if syntastic#util#findFileInParent('.jscsrc', expand('%:p:h', 1)) !=# ''
-" 	call extend(js_linters, 'jscs')
-" endif
-
-" autocmd FileType javascript let b:syntastic_checkers = js_linters
-autocmd FileType javascript let b:syntastic_checkers = ['eslint']
