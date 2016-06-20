@@ -4,6 +4,7 @@ export ZSH=$HOME/.oh-my-zsh
 ZSH_THEME="agnoster"
 
 source $HOME/.local.zshrc
+source $HOME/.zshalias
 
 ENABLE_CORRECTION="true"
 COMPLETION_WAITING_DOTS="true"
@@ -29,9 +30,6 @@ fi
 # ssh
 # export SSH_KEY_PATH="~/.ssh/dsa_id"
 
-alias npm-pack-info='tarball="$(npm pack .)"; wc -c "${tarball}"; tar tvf "${tarball}"; rm "${tarball}";'
-alias gits='git s'
-
 # Setup zsh-autosuggestions
 [ -s $HOME/.zsh-autosuggestions/autosuggestions.zsh ] && source $HOME/.zsh-autosuggestions/autosuggestions.zsh
 
@@ -43,14 +41,12 @@ if [ "$(uname)" = "Darwin" ]; then
     nvm "$@"
   }
   export CHROME_BIN="/usr/local/Caskroom/google-chrome/latest/Google Chrome.app/Contents/MacOS/Google Chrome"
-  alias fuck='$(thefuck $(fc -ln -1))'
 elif [ "$(expr substr $(uname -s) 1 5)" = "Linux" ]; then
   function nvm() {
     [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
     nvm "$@"
   }
-  alias fuck='eval $(thefuck $(fc -ln -1))'
-#elif [ "$(expr substr $(uname -s) 1 10)" = "MINGW32_NT" ]; then
+elif [ "$(expr substr $(uname -s) 1 10)" = "MINGW32_NT" ]; then
   # Do something under Windows NT platform
 fi
 
@@ -59,15 +55,6 @@ function npm() {
   unset -f npm
   npm "$@"
 }
-
-alias ccat="pygmentize -g"
-
-alias idea='nocorrect idea'
-alias vcsh='nocorrect vcsh'
-alias config='nocorrect config'
-
-alias vim=nvim
-
 # If a space is added before the command, don't add it to history
 # Useful if you enter your password in a command
 setopt HIST_IGNORE_SPACE
