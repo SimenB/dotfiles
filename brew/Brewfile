@@ -17,6 +17,7 @@ brew 'jpeg'
 brew 'imagemagick'
 brew 'jenv'
 brew 'openssl'
+brew 'python3'
 brew 'macvim', args: ['with-override-system-vim']
 brew 'maven'
 brew 'mr'
