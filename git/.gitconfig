@@ -57,14 +57,14 @@
 	enabled = true
 
 [alias]
-	nice			= log --graph --decorate --oneline --branches
+	nice			= !echo use glog
 	panic			= !tar cvf ../git_panic.tar * --exclude='target/*' --exclude='*.class'
 
 	la			= !grep '\t=' ~/.gitconfig
 	#la			= "!grep '\t=' ~/.gitconfig | sed -e 's/=/^[[0;31m=^[[0m/g' | sed -e 's/#.*/^[[0;32m&^[[0m/g'"
 	ignored			= ls-files --others -i --exclude-standard
 	ready			= rebase -i @{u}
-	logs			= log --oneline --decorate
+	logs			= !echo use glo
 	s			= !echo use gsb
 	rb			= "!f() { git rebase HEAD~$1 -i; }; f"
 	rbs			= "!f() { git stash && git rb $1 && git stash pop; }; f"
