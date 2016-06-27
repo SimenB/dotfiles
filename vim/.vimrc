@@ -2,6 +2,10 @@ if $COLORTERM == 'gnome-terminal'
 	set t_Co=256
 endif
 
+function! DoRemote(arg)
+	UpdateRemotePlugins
+endfunction
+
 " make sure plug is installed
 if empty(glob('~/.vim/autoload/plug.vim'))
 	silent !curl -fLo ~/.vim/autoload/plug.vim --create-dirs
@@ -31,6 +35,7 @@ Plug 'tomtom/tcomment_vim'
 Plug 'tmux-plugins/vim-tmux-focus-events'
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'jaawerth/nrun.vim'
+Plug 'Shougo/deoplete.nvim', { 'do': function('DoRemote') }
 call plug#end()
 
 colorscheme molokai
@@ -152,3 +157,4 @@ let b:neomake_javascript_enabled_makers = ['eslint']
 
 let g:jsx_ext_required = 0 " Allow JSX in normal JS files
 
+let g:deoplete#enable_at_startup = 1
