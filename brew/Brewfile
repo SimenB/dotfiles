@@ -18,7 +18,6 @@ brew 'imagemagick'
 brew 'jenv'
 brew 'openssl'
 brew 'python3'
-brew 'macvim', args: ['with-override-system-vim']
 brew 'maven'
 brew 'mr'
 brew 'nginx', args: ['with-http2']
