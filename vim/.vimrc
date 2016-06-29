@@ -142,7 +142,7 @@ if has("autocmd")
 	" Treat .md files as Markdown
 	autocmd BufNewFile,BufRead *.md setlocal filetype=markdown
 	" Run linting on every file save
-	autocmd! BufWritePost,BufEnter * Neomake
+	autocmd! BufWritePost * Neomake
 endif
 
 let g:airline_powerline_fonts = 1
