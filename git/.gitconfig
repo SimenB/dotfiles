@@ -2,7 +2,6 @@
 	ignorecase = false
 	# Avoid some useless, OS-specific files
 	excludesfile = ~/.gitignore_global
-	editor = vim
 
 	# Treat spaces before tabs and all kinds of trailing whitespace as an error
 	whitespace = space-before-tab,-indent-with-non-tab,trailing-space
