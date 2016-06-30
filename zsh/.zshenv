@@ -1,6 +1,6 @@
 export PATH=${PATH}:~/.scripts
 export PATH=${PATH}:~/npm/bin
-export PATH="/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:$PATH"
+export PATH="/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/sbin:$PATH"
 export PATH=${PATH}:${JBOSS_HOME}/bin
 export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
 
