@@ -1,5 +1,6 @@
 alias npm-pack-info='tarball="$(npm pack .)"; wc -c "${tarball}"; tar tvf "${tarball}"; rm "${tarball}";'
 alias gits='git s'
+alias gpsup='ggpush && ggsup'
 
 if [ "$(uname)" = "Darwin" ]; then
 	alias fuck='$(thefuck $(fc -ln -1))'
