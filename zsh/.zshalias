@@ -1,4 +1,6 @@
 alias npm-pack-info='tarball="$(npm pack .)"; wc -c "${tarball}"; tar tvf "${tarball}"; rm "${tarball}";'
+
+# Git
 alias gits='git s'
 alias gpsup='ggpush && ggsup'
 
