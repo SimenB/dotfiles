@@ -17,7 +17,7 @@ COMPLETION_WAITING_DOTS="true"
 HIST_STAMPS="dd.mm.yyyy"
 
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git z sudo brew npm mvn zsh-syntax-highlighting history-substring-search)
+plugins=(git z sudo brew npm mvn zsh-syntax-highlighting history-substring-search docker)
 
 source $ZSH/oh-my-zsh.sh
 
