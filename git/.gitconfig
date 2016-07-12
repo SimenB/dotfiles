@@ -88,6 +88,7 @@
 	stash			= -c commit.gpgsign=false stash
 	diff-copy		= !git --no-pager diff | pbcopy
 	commit-copy		= !git --no-pager diff HEAD^ | pbcopy
+	commits-copy		= "!f() { git --no-pager diff HEAD~$1 | pbcopy; }; f"
 [git-up "fetch"]
 	all = true
 [rebase]
