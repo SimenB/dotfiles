@@ -87,6 +87,7 @@
 	githubprofile		= !git config user.name \"Simen Bekkhus\" && git config user.email \"sbekkhus91@gmail.com\" && git config commit.gpgsign true
 	stash			= -c commit.gpgsign=false stash
 	diff-copy		= !git --no-pager diff | pbcopy
+	commit-copy		= !git --no-pager diff HEAD^ | pbcopy
 [git-up "fetch"]
 	all = true
 [rebase]
