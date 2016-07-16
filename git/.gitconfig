@@ -67,8 +67,8 @@
 	s			= !echo use gsb
 	rb			= "!f() { git rebase HEAD~$1 -i; }; f"
 	rbs			= "!f() { git stash && git rb $1 && git stash pop; }; f"
-	remas			= !git fetchall && git rebase origin/master
-	redev			= !git fetchall && git rebase origin/develop
+	remas			= !gfa && git rebase origin/master
+	redev			= !gfa && git rebase origin/develop
 	amend			= !echo use gcn!
 	amenda			= !echo use gcan!
 	del-branch		= "!f() { git push origin :$1; }; f"
