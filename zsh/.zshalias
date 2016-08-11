@@ -2,8 +2,6 @@ alias npm-pack-info='tarball="$(npm pack .)"; wc -c "${tarball}"; tar tvf "${tar
 
 # Git
 alias gits='git s'
-# Remove after https://github.com/robbyrussell/oh-my-zsh/pull/5287/
-alias gpsup='git push --set-upstream origin $(git_current_branch)'
 
 if [ "$(uname)" = "Darwin" ]; then
 	alias fuck='$(thefuck $(fc -ln -1))'
