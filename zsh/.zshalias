@@ -3,6 +3,10 @@ alias npm-pack-info='tarball="$(npm pack .)"; wc -c "${tarball}"; tar tvf "${tar
 # Git
 alias gits='git s'
 
+# Alias gpg to handle both gpg1 and gpg
+# For some reason, brew behaves differently on my personal and work machine
+alias gpg='gpg | gpg1'
+
 if [ "$(uname)" = "Darwin" ]; then
 	alias fuck='$(thefuck $(fc -ln -1))'
 elif [ "$(expr substr $(uname -s) 1 5)" = "Linux" ]; then
