@@ -99,3 +99,5 @@
 	diff = diff-so-fancy | less
 [interactive]
 	diffFilter = diff-so-fancy
+[gpg]
+	program = gpg1
