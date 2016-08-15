@@ -17,7 +17,10 @@ COMPLETION_WAITING_DOTS="true"
 HIST_STAMPS="dd.mm.yyyy"
 
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git z sudo brew npm mvn zsh-syntax-highlighting history-substring-search docker)
+plugins=(git z sudo brew npm mvn tmux zsh-syntax-highlighting history-substring-search docker kubectl osx)
+
+# Automatically start a tmux session on login
+ZSH_TMUX_AUTOSTART="true"
 
 source $ZSH/oh-my-zsh.sh
 
