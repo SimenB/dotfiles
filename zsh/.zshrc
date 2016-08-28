@@ -8,6 +8,7 @@ source $HOME/.zshalias
 
 ENABLE_CORRECTION="true"
 COMPLETION_WAITING_DOTS="true"
+export NVM_LAZY_LOAD=true
 
 # Uncomment the following line if you want to disable marking untracked files
 # under VCS as dirty. This makes repository status check for large repositories
@@ -17,7 +18,7 @@ COMPLETION_WAITING_DOTS="true"
 HIST_STAMPS="dd.mm.yyyy"
 
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git z sudo brew npm mvn tmux history-substring-search docker kubectl osx)
+plugins=(git z sudo brew npm mvn tmux history-substring-search docker kubectl osx zsh-nvm)
 
 # Automatically start a tmux session on login
 ZSH_TMUX_AUTOSTART="true"
@@ -39,25 +40,13 @@ fi
 export NVM_DIR=~/.nvm
 
 if [ "$(uname)" = "Darwin" ]; then
-  function nvm() {
-    source $(brew --prefix nvm)/nvm.sh
-    nvm "$@"
-  }
   export CHROME_BIN="/usr/local/Caskroom/google-chrome/latest/Google Chrome.app/Contents/MacOS/Google Chrome"
 elif [ "$(expr substr $(uname -s) 1 5)" = "Linux" ]; then
-  function nvm() {
-    [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
-    nvm "$@"
-  }
+  # Do soemthing on Linux
 elif [ "$(expr substr $(uname -s) 1 10)" = "MINGW32_NT" ]; then
   # Do something under Windows NT platform
 fi
 
-function npm() {
-  nvm --version > /dev/null 2>&1
-  unset -f npm
-  npm "$@"
-}
 # If a space is added before the command, don't add it to history
 # Useful if you enter your password in a command
 setopt HIST_IGNORE_SPACE
