@@ -52,3 +52,6 @@ fi
 setopt HIST_IGNORE_SPACE
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+
+# Override `-R` from oh-my-zsh
+export LESS="-FRX"
