@@ -22,7 +22,6 @@ brew 'openssl'
 brew 'maven'
 brew 'mr'
 brew 'nginx', args: ['with-http2']
-brew 'nvm'
 brew 'python3'
 brew 'the_platinum_searcher'
 brew 'thefuck'
