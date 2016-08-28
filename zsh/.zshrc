@@ -18,7 +18,7 @@ export NVM_LAZY_LOAD=true
 HIST_STAMPS="dd.mm.yyyy"
 
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git z sudo brew npm mvn tmux docker kubectl osx zsh-nvm zsh-completions)
+plugins=(git z sudo brew npm mvn tmux docker kubectl osx zsh-nvm zsh-completions k)
 
 # Automatically start a tmux session on login
 ZSH_TMUX_AUTOSTART="true"
