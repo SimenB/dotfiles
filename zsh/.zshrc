@@ -3,8 +3,8 @@ export ZSH=$HOME/.oh-my-zsh
 
 ZSH_THEME="agnoster"
 
-source $HOME/.local.zshrc
 source $HOME/.zshalias
+[ -s $HOME/.local.zshrc ] && source $HOME/.local.zshrc
 
 ENABLE_CORRECTION="true"
 COMPLETION_WAITING_DOTS="true"
