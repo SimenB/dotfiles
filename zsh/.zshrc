@@ -17,7 +17,7 @@ COMPLETION_WAITING_DOTS="true"
 HIST_STAMPS="dd.mm.yyyy"
 
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git z sudo brew npm mvn tmux zsh-syntax-highlighting history-substring-search docker kubectl osx)
+plugins=(git z sudo brew npm mvn tmux history-substring-search docker kubectl osx)
 
 # Automatically start a tmux session on login
 ZSH_TMUX_AUTOSTART="true"
@@ -33,8 +33,8 @@ fi
 # ssh
 # export SSH_KEY_PATH="~/.ssh/dsa_id"
 
-# Setup zsh-autosuggestions
-[ -s $HOME/.zsh-autosuggestions/autosuggestions.zsh ] && source $HOME/.zsh-autosuggestions/autosuggestions.zsh
+[ -s $HOME/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh ] && source $HOME/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
+[ -s $HOME/.zsh/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh ] && source $HOME/.zsh/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
 export NVM_DIR=~/.nvm
 
