@@ -18,7 +18,7 @@ export NVM_LAZY_LOAD=true
 HIST_STAMPS="dd.mm.yyyy"
 
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git z sudo brew npm mvn tmux history-substring-search docker kubectl osx zsh-nvm)
+plugins=(git z sudo brew npm mvn tmux docker kubectl osx zsh-nvm)
 
 # Automatically start a tmux session on login
 ZSH_TMUX_AUTOSTART="true"
@@ -36,6 +36,7 @@ fi
 
 [ -s $HOME/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh ] && source $HOME/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
 [ -s $HOME/.zsh/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh ] && source $HOME/.zsh/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+[ -s $HOME/.zsh-history-substring-search/zsh-history-substring-search.zsh ] && source $HOME/.zsh/zsh-syntax-highlighting/zsh-syntax-highlighting
 
 export NVM_DIR=~/.nvm
 
