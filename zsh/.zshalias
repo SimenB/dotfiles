@@ -28,3 +28,4 @@ alias vim=nvim
 alias drmae='docker rm $(docker ps --quiet --all --no-trunc --filter "status=exited")'
 alias drmi='docker rmi $(docker images --quiet --no-trunc --filter "dangling=true")'
 alias dritrm='docker run --interactive --tty --rm' #-it
+alias dritd='docker run --interactive --tty -d' #-it
