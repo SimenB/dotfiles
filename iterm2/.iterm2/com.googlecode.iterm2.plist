@@ -1347,8 +1347,10 @@
 	<true/>
 	<key>MaxVertically</key>
 	<false/>
+	<key>NSFontPanelAttributes</key>
+	<string>1, 1</string>
 	<key>NSNavLastRootDirectory</key>
-	<string>~/Downloads</string>
+	<string>~</string>
 	<key>NSNavPanelExpandedSizeForOpenMode</key>
 	<string>{712, 459}</string>
 	<key>NSQuotedKeystrokeBinding</key>
@@ -1356,6 +1358,8 @@
 	<key>NSRepeatCountBinding</key>
 	<string></string>
 	<key>NSScrollAnimationEnabled</key>
+	<false/>
+	<key>NSScrollViewShouldScrollUnderTitlebar</key>
 	<false/>
 	<key>NSTableView Columns KeyBingingTable</key>
 	<array>
@@ -1368,18 +1372,29 @@
 		BAtzdHJlYW10eXBlZIHoA4QBQISEhAhOU1N0cmluZwGEhAhOU09iamVjdACF
 		hAErATGG
 		</data>
-		<string>302</string>
+		<string>322</string>
 	</array>
 	<key>NSTableView Hidden Columns KeyBingingTable</key>
 	<array/>
 	<key>NSTableView Sort Ordering KeyBingingTable</key>
 	<array/>
+	<key>NSToolbar Configuration com.apple.NSColorPanel</key>
+	<dict>
+		<key>TB Is Shown</key>
+		<integer>1</integer>
+	</dict>
 	<key>NSWindow Frame NSFontPanel</key>
-	<string>546 223 768 103 0 0 1440 877 </string>
+	<string>-511 113 445 77 -1440 0 1440 900 </string>
 	<key>NSWindow Frame Preferences</key>
-	<string>269 198 924 485 0 0 1680 1050 </string>
+	<string>0 194 924 485 0 0 1440 900 </string>
+	<key>NSWindow Frame SUAutomaticUpdateAlert</key>
+	<string>972 969 616 174 0 0 2560 1440 </string>
+	<key>NSWindow Frame SharedPreferences</key>
+	<string>-1171 148 796 473 -1440 0 1440 900 </string>
 	<key>NSWindow Frame iTerm Window 0</key>
-	<string>480 225 570 426 0 0 1680 1027 </string>
+	<string>-1049 350 570 427 -1440 0 1440 877 </string>
+	<key>NSWindow Frame iTerm Window 1</key>
+	<string>377 189 570 426 0 0 2560 1417 </string>
 	<key>New Bookmarks</key>
 	<array>
 		<dict>
@@ -1856,10 +1871,22 @@
 			<string>/Users/simenbekkhus</string>
 		</dict>
 	</array>
+	<key>NoSyncInstallationId</key>
+	<string>FA5D50C9-AE50-429B-AA38-DCE52FB077D8</string>
+	<key>NoSyncLastTipTime</key>
+	<real>495706225.29271001</real>
+	<key>NoSyncPermissionToShowTip</key>
+	<true/>
+	<key>NoSyncTimeOfFirstLaunchOfVersionWithTip</key>
+	<real>486977128.591699</real>
 	<key>NoSyncTimeOfLastPromo</key>
-	<real>481186881.83174801</real>
+	<real>483886684.42878801</real>
 	<key>NoSyncTimeOfLastPromoDownload</key>
-	<real>487746490.05592197</real>
+	<real>495547118.63523299</real>
+	<key>NoSyncTipsToNotShow</key>
+	<array>
+		<string>000</string>
+	</array>
 	<key>OnlyWhenMoreTabs</key>
 	<true/>
 	<key>OpenArrangementAtStartup</key>
@@ -1906,7 +1933,7 @@
 		</dict>
 	</dict>
 	<key>PrefsCustomFolder</key>
-	<string>/Users/simen/.iterm2</string>
+	<string>/Users/simbekkh/.iterm2</string>
 	<key>PromptOnQuit</key>
 	<true/>
 	<key>QuitWhenAllWindowsClosed</key>
@@ -1915,22 +1942,26 @@
 	<integer>8</integer>
 	<key>RightOption</key>
 	<integer>3</integer>
+	<key>SUAutomaticallyUpdate</key>
+	<true/>
 	<key>SUEnableAutomaticChecks</key>
 	<true/>
+	<key>SUFeedAlternateAppNameKey</key>
+	<string>iTerm</string>
 	<key>SUFeedURL</key>
-	<string>https://iterm2.com/appcasts/testing.xml</string>
+	<string>https://iterm2.com/appcasts/testing.xml?shard=10</string>
 	<key>SUHasLaunchedBefore</key>
 	<true/>
 	<key>SULastCheckTime</key>
-	<date>2016-06-16T05:05:58Z</date>
+	<date>2016-09-16T08:10:24Z</date>
 	<key>SUSkippedVersion</key>
-	<string>3.0.2</string>
+	<string>3.0.9</string>
 	<key>SavePasteHistory</key>
 	<false/>
 	<key>ShowBookmarkName</key>
 	<false/>
 	<key>ShowFullScreenTabBar</key>
-	<true/>
+	<false/>
 	<key>ShowPaneTitles</key>
 	<true/>
 	<key>SmartPlacement</key>
@@ -1974,6 +2005,6 @@
 	<key>findRegex_iTerm</key>
 	<false/>
 	<key>iTerm Version</key>
-	<string>2.1.4</string>
+	<string>3.0.10</string>
 </dict>
 </plist>
