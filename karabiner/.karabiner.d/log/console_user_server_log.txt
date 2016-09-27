@@ -1,5 +1,0 @@
-[2016-09-27 10:15:51.605] [console_user_server] [info] version 0.90.44
-[2016-09-27 10:15:52.696] [console_user_server] [info] grabber_client_ is connected
-[2016-09-27 10:15:52.697] [console_user_server] [info] configuration_core_ was loaded.
-[2016-09-27 10:15:53.761] [console_user_server] [info] system_preferences::values is updated.
-[2016-09-27 10:17:12.444] [console_user_server] [info] configuration_core_ was loaded.
