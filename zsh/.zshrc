@@ -8,6 +8,7 @@ source $HOME/.zshalias
 
 ENABLE_CORRECTION="true"
 COMPLETION_WAITING_DOTS="true"
+export NVM_DIR=~/.nvm
 export NVM_LAZY_LOAD=true
 
 # Uncomment the following line if you want to disable marking untracked files
@@ -37,8 +38,6 @@ fi
 [ -s $HOME/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh ] && source $HOME/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
 [ -s $HOME/.zsh/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh ] && source $HOME/.zsh/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 [ -s $HOME/.zsh-history-substring-search/zsh-history-substring-search.zsh ] && source $HOME/.zsh/zsh-syntax-highlighting/zsh-syntax-highlighting
-
-export NVM_DIR=~/.nvm
 
 if [ "$(uname)" = "Darwin" ]; then
   export CHROME_BIN="/usr/local/Caskroom/google-chrome/latest/Google Chrome.app/Contents/MacOS/Google Chrome"
