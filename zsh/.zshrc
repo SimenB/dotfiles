@@ -6,7 +6,12 @@ ZSH_THEME="agnoster"
 source $HOME/.zshalias
 [ -s $HOME/.local.zshrc ] && source $HOME/.local.zshrc
 
-ENABLE_CORRECTION="true"
+# Make sure to just correct commands, not arguments
+# http://superuser.com/a/610025/365668
+ENABLE_CORRECTION="false"
+unsetopt correct_all
+setopt correct
+
 COMPLETION_WAITING_DOTS="true"
 export NVM_DIR=~/.nvm
 export NVM_LAZY_LOAD=true

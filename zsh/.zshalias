@@ -17,11 +17,6 @@ fi
 
 alias ccat="pygmentize -g"
 
-alias git='nocorrect git'
-alias idea='nocorrect idea'
-alias vcsh='nocorrect vcsh'
-alias config='nocorrect config'
-
 alias vim=nvim
 
 # Docker
