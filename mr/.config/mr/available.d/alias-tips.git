@@ -1,0 +1,3 @@
+# Until I get ZPlug up and running...
+[$HOME/.oh-my-zsh/custom/plugins/alias-tips]
+checkout = git clone git@github.com:djui/alias-tips alias-tips
