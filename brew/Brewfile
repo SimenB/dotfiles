@@ -52,7 +52,7 @@ brew 'ttygif'
 brew 'vcsh'
 brew 'watchman'
 brew 'wget'
-brew 'yarn'
+brew 'yarn', args: ['skip-dependencies']
 brew 'youtube-dl'
 brew 'z'
 brew 'zplug'
