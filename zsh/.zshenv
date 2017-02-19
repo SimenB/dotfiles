@@ -10,3 +10,4 @@ export LANG=en_US.UTF-8
 export JBOSS_HOME=/usr/local/opt/wildfly-as/libexec
 
 export FZF_DEFAULT_COMMAND="rg -g --files"
+export FZF_CTRL_R_OPTS="--exact"
