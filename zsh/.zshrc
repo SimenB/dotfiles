@@ -60,3 +60,5 @@ setopt HIST_IGNORE_SPACE
 
 # Override `-R` from oh-my-zsh
 export LESS="-FRX"
+
+test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
