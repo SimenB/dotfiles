@@ -30,3 +30,9 @@ alias rg='rg --type-add "zsh:*.zsh" --type-add "zsh:.zshrc" --type-add "zsh:.zsh
 
 # iOS
 alias simulator='open /Applications/Xcode.app/Contents/Developer/Applications/Simulator.app'
+
+# Kubernetes
+alias kcon='kubectl --context'
+alias kdev='kcon gke_fiaas-gke_europe-west1-d_dev'
+alias kprod='kcon prod1'
+alias kstaging='kcon staging'
