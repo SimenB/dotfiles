@@ -3,9 +3,6 @@ export ZSH=$HOME/.oh-my-zsh
 
 ZSH_THEME="agnoster"
 
-source $HOME/.zshalias
-[ -s $HOME/.local.zshrc ] && source $HOME/.local.zshrc
-
 # Make sure to just correct commands, not arguments
 # http://superuser.com/a/610025/365668
 ENABLE_CORRECTION="false"
@@ -36,6 +33,9 @@ if [[ -n $SSH_CONNECTION ]]; then
 else
   export EDITOR='nvim'
 fi
+
+source $HOME/.zshalias
+[ -s $HOME/.local.zshrc ] && source $HOME/.local.zshrc
 
 # ssh
 # export SSH_KEY_PATH="~/.ssh/dsa_id"
