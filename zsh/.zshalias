@@ -40,3 +40,8 @@ alias kcon='kubectl --context'
 alias kdev='kcon dev'
 alias kprod='kcon prod1'
 alias kstaging='kcon staging'
+
+# Watch
+# These exist so alias expansion works when using watch
+alias watch='watch '
+alias watchd='watch -d '
