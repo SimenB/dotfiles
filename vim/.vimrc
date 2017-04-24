@@ -38,6 +38,8 @@ Plug 'jaawerth/nrun.vim'
 Plug 'Shougo/deoplete.nvim', { 'do': function('DoRemote') }
 Plug 'puppetlabs/puppet-syntax-vim'
 Plug 'sjl/splice.vim'
+Plug 'tpope/vim-surround'
+Plug 'tpope/vim-repeat'
 call plug#end()
 
 colorscheme molokai
