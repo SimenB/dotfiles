@@ -157,3 +157,5 @@ let b:neomake_javascript_enabled_makers = ['eslint']
 let g:jsx_ext_required = 0 " Allow JSX in normal JS files
 
 let g:deoplete#enable_at_startup = 1
+
+set spell
