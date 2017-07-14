@@ -45,7 +45,8 @@ source $HOME/.zshalias
 [ -s $HOME/.zsh-history-substring-search/zsh-history-substring-search.zsh ] && source $HOME/.zsh/zsh-syntax-highlighting/zsh-syntax-highlighting
 
 if [ "$(uname)" = "Darwin" ]; then
-  export CHROME_BIN="/usr/local/Caskroom/google-chrome/latest/Google Chrome.app/Contents/MacOS/Google Chrome"
+  # Not needed for now
+  # export CHROME_BIN="/Applications/Google\ Chrome.app/Contents/MacOS/Google\ Chrome"
 elif [ "$(expr substr $(uname -s) 1 5)" = "Linux" ]; then
   # Do something on Linux
 elif [ "$(expr substr $(uname -s) 1 10)" = "MINGW32_NT" ]; then
