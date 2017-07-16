@@ -13,6 +13,7 @@
 	# Prevent showing files whose names contain non-ASCII symbols as unversioned.
 	# http://michael-kuehnel.de/git/2014/11/21/git-mac-osx-and-german-umlaute.html
 	precomposeunicode = false
+	pager = diff-so-fancy | less --tabs=4 -RFX
 
 [credential]
 	# Cache password when using https
@@ -103,3 +104,5 @@
 	diffFilter = diff-so-fancy
 [gpg]
 	program = gpg1
+[diff-so-fancy]
+	first-run = false
