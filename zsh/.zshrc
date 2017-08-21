@@ -12,6 +12,7 @@ setopt correct
 COMPLETION_WAITING_DOTS="true"
 export NVM_DIR=~/.nvm
 export NVM_LAZY_LOAD=true
+export NVM_AUTO_USE=true
 
 # Uncomment the following line if you want to disable marking untracked files
 # under VCS as dirty. This makes repository status check for large repositories
