@@ -64,3 +64,6 @@ setopt HIST_IGNORE_SPACE
 export LESS="-FRX"
 
 test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
+
+# OPAM configuration
+. $HOME/.opam/opam-init/init.zsh > /dev/null 2> /dev/null || true
