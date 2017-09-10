@@ -42,6 +42,7 @@ Plug 'tpope/vim-surround'
 Plug 'tpope/vim-repeat'
 Plug 'bogado/file-line'
 Plug 'tmux-plugins/vim-tmux', { 'for': 'tmux' }
+Plug 'tweekmonster/startuptime.vim'
 call plug#end()
 
 colorscheme molokai
