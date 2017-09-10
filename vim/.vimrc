@@ -41,6 +41,7 @@ Plug 'sjl/splice.vim'
 Plug 'tpope/vim-surround'
 Plug 'tpope/vim-repeat'
 Plug 'bogado/file-line'
+Plug 'tmux-plugins/vim-tmux', { 'for': 'tmux' }
 call plug#end()
 
 colorscheme molokai
