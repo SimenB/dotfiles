@@ -106,3 +106,5 @@
 	program = gpg1
 [diff-so-fancy]
 	first-run = false
+[log]
+	date = iso-local
