@@ -7,10 +7,6 @@ alias gbD='git branch -D'
 # https://github.com/robbyrussell/oh-my-zsh/pull/6031
 alias gwip='git add -A; git rm $(git ls-files --deleted) 2> /dev/null; git commit --no-verify --no-gpg-sign -m "--wip-- [skip ci]"'
 
-# Alias gpg to handle both gpg1 and gpg
-# For some reason, brew behaves differently on my personal and work machine
-alias gpg='gpg | gpg1'
-
 if [ "$(uname)" = "Darwin" ]; then
 	alias fuck='$(thefuck $(fc -ln -1))'
 elif [ "$(expr substr $(uname -s) 1 5)" = "Linux" ]; then
