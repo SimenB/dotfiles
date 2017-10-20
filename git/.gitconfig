@@ -102,8 +102,6 @@
 	diff = diff-so-fancy | less
 [interactive]
 	diffFilter = diff-so-fancy --patch-mode | less --tabs=4 -RFX
-[gpg]
-	program = gpg1
 [diff-so-fancy]
 	first-run = false
 [log]
