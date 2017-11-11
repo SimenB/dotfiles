@@ -106,3 +106,5 @@
 	first-run = false
 [log]
 	date = iso-local
+[github]
+	username = SimenB
