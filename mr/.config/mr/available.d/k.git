@@ -1,3 +1,0 @@
-# Until I get ZPlug up and running...
-[$HOME/.oh-my-zsh/custom/plugins/k]
-checkout = git clone git@github.com:supercrabtree/k k
