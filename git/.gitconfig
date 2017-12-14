@@ -108,3 +108,5 @@
 	date = iso-local
 [github]
 	username = SimenB
+[fetch]
+	prune = true
