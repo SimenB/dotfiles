@@ -20,7 +20,6 @@ Plug 'tomasr/molokai'
 Plug 'bling/vim-airline'
 Plug 'kien/ctrlp.vim'
 Plug 'scrooloose/nerdtree', { 'on': 'NERDTreeToggle' }
-Plug 'neomake/neomake'
 Plug 'nazo/pt.vim'
 Plug 'airblade/vim-gitgutter'
 Plug 'edkolev/tmuxline.vim'
@@ -43,6 +42,7 @@ Plug 'tpope/vim-repeat'
 Plug 'bogado/file-line'
 Plug 'tmux-plugins/vim-tmux', { 'for': 'tmux' }
 Plug 'tweekmonster/startuptime.vim'
+Plug 'w0rp/ale'
 call plug#end()
 
 colorscheme molokai
@@ -142,20 +142,15 @@ if has("autocmd")
 	autocmd BufNewFile,BufRead *.json setfiletype json syntax=javascript
 	" Treat .md files as Markdown
 	autocmd BufNewFile,BufRead *.md setlocal filetype=markdown
-	" Run linting on every file save
-	autocmd! BufWritePost * Neomake
 endif
 
 let g:airline_powerline_fonts = 1
+let g:airline#extensions#ale#enabled = 1
 
-" TODO: Figure out what fits for NeoMake
-" set statusline+=%#warningmsg#
-" set statusline+=%{SyntasticStatuslineFlag()}
-" set statusline+=%*
-
-let g:neomake_open_list = 2
-let b:neomake_javascript_eslint_exe = nrun#Which('eslint')
-let b:neomake_javascript_enabled_makers = ['eslint']
+let g:ale_fixers = {
+\   'javascript': ['eslint'],
+\}
+let g:ale_fix_on_save = 1
 
 let g:jsx_ext_required = 0 " Allow JSX in normal JS files
 
