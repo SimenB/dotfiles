@@ -41,3 +41,5 @@ alias kstaging='kcon staging'
 # These exist so alias expansion works when using watch
 alias watch='watch '
 alias watchd='watch -d '
+
+alias dedupe-yarn='tmpfile=$(mktemp) && yarn-tools fix-duplicates yarn.lock > $tmpfile && mv $tmpfile yarn.lock'
