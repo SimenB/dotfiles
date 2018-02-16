@@ -1,2 +1,14 @@
 # Because who cares about case!?
 --smart-case
+
+# zsh type
+--type-add
+zsh:*.zsh
+--type-add
+zsh:.zshrc
+--type-add
+zsh:.zshalias
+--type-add
+zsh:.zshenv
+--type-add
+zsh:.zprofile
