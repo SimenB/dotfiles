@@ -25,9 +25,6 @@ alias drmi='docker rmi $(docker images --quiet --no-trunc --filter "dangling=tru
 alias dritrm='docker run --interactive --tty --rm' #-it
 alias dritd='docker run --interactive --tty -d' #-it
 
-# RipGrep
-alias rg='rg --type-add "zsh:*.zsh" --type-add "zsh:.zshrc" --type-add "zsh:.zshalias" --type-add "zsh:.zshenv" --type-add "zsh:.zprofile"'
-
 # iOS
 alias simulator='open /Applications/Xcode.app/Contents/Developer/Applications/Simulator.app'
 
