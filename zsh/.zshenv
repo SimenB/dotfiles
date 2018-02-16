@@ -11,3 +11,5 @@ export JBOSS_HOME=/usr/local/opt/wildfly-as/libexec
 
 export FZF_DEFAULT_COMMAND="fd --hidden --color never --exclude .git/ --type file"
 export FZF_CTRL_R_OPTS="--exact"
+
+export RIPGREP_CONFIG_PATH="$HOME/.config/ripgrep/ripgreprc"
