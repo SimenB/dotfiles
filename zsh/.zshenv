@@ -13,3 +13,6 @@ export FZF_DEFAULT_COMMAND="fd --hidden --color never --exclude .git/ --type fil
 export FZF_CTRL_R_OPTS="--exact"
 
 export RIPGREP_CONFIG_PATH="$HOME/.config/ripgrep/ripgreprc"
+
+# python needs to be python 2
+export PATH=/System/Library/Frameworks/Python.framework/Versions/Current/bin:$PATH
