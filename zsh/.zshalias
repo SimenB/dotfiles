@@ -15,7 +15,8 @@ elif [ "$(expr substr $(uname -s) 1 10)" = "MINGW32_NT" ]; then
 	# Do something under Windows NT platform
 fi
 
-alias ccat="pygmentize -g"
+alias ccat="echo use bat; return 1;"
+alias cat="echo use bat; return 1;"
 
 alias vim=nvim
 
