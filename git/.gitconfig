@@ -85,8 +85,8 @@
 	add-upstream		= remote add upstream
 	force-pop		= !git stash show -p | git apply && git stash drop
 	satsh			= stash
-	githubprofile		= !git config user.name \"Simen Bekkhus\" && git config user.email \"sbekkhus91@gmail.com\" && git config commit.gpgsign true
-	workprofile		= !git config user.name \"simbekkh\" && git config user.email \"simen.bekkhus@finn.no\" && git config commit.gpgsign false
+	githubprofile		= !git config user.name \"Simen Bekkhus\" && git config user.email \"sbekkhus91@gmail.com\"
+	workprofile		= !git config user.name \"Simen Bekkhus\" && git config user.email \"simenb@folio.no\"
 	stash			= stash --no-gpg-sign
 	diff-copy		= !git --no-pager diff | pbcopy
 	commit-copy		= !git --no-pager diff HEAD^ | pbcopy
@@ -110,3 +110,5 @@
 	username = SimenB
 [fetch]
 	prune = true
+[commit]
+	gpgsign = true
