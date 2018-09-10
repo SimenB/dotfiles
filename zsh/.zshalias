@@ -31,9 +31,8 @@ alias simulator='open /Applications/Xcode.app/Contents/Developer/Applications/Si
 
 # Kubernetes
 alias kcon='kubectl --context'
-alias kdev='kcon dev'
-alias kprod='kcon prod1'
-alias kstaging='kcon staging'
+alias kprod='kcon gke_crested-disk-192509_europe-west1-b_prod'
+alias kstaging='kcon gke_crested-disk-192509_europe-west1-b_staging'
 
 # Watch
 # These exist so alias expansion works when using watch
