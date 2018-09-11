@@ -43,6 +43,7 @@ Plug 'bogado/file-line'
 Plug 'tmux-plugins/vim-tmux', { 'for': 'tmux' }
 Plug 'tweekmonster/startuptime.vim'
 Plug 'w0rp/ale'
+Plug 'leafgarland/typescript-vim', { 'for': 'typescript' }
 call plug#end()
 
 colorscheme molokai
