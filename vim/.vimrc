@@ -25,9 +25,7 @@ Plug 'airblade/vim-gitgutter'
 Plug 'edkolev/tmuxline.vim'
 Plug 'tpope/vim-fugitive'
 Plug 'editorconfig/editorconfig-vim'
-Plug 'mxw/vim-jsx'
 Plug 'mattn/emmet-vim', { 'for': 'html' }
-Plug 'mustache/vim-mustache-handlebars'
 Plug 'sickill/vim-pasta'
 Plug 'regedarek/ZoomWin'
 Plug 'tomtom/tcomment_vim'
@@ -35,7 +33,6 @@ Plug 'tmux-plugins/vim-tmux-focus-events'
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'jaawerth/nrun.vim'
 Plug 'Shougo/deoplete.nvim', { 'do': function('DoRemote') }
-Plug 'puppetlabs/puppet-syntax-vim'
 Plug 'sjl/splice.vim'
 Plug 'tpope/vim-surround'
 Plug 'tpope/vim-repeat'
@@ -43,7 +40,7 @@ Plug 'bogado/file-line'
 Plug 'tmux-plugins/vim-tmux', { 'for': 'tmux' }
 Plug 'tweekmonster/startuptime.vim'
 Plug 'w0rp/ale'
-Plug 'leafgarland/typescript-vim', { 'for': 'typescript' }
+Plug 'sheerun/vim-polyglot'
 call plug#end()
 
 colorscheme molokai
