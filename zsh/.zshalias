@@ -39,3 +39,4 @@ alias watchd='watch -d '
 alias dedupe-yarn='tmpfile=$(mktemp) && yarn-tools fix-duplicates yarn.lock > $tmpfile && mv $tmpfile yarn.lock'
 
 alias ls="exa"
+alias ping="prettyping --nolegend"
