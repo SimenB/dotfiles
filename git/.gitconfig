@@ -112,3 +112,5 @@
 	prune = true
 [commit]
 	gpgsign = true
+[transfer]
+	fsckObjects = true
