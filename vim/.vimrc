@@ -32,7 +32,7 @@ Plug 'tomtom/tcomment_vim'
 Plug 'tmux-plugins/vim-tmux-focus-events'
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'jaawerth/nrun.vim'
-Plug 'Shougo/deoplete.nvim', { 'do': function('DoRemote') }
+Plug 'neoclide/coc.nvim', {'tag': '*', 'do': { -> coc#util#install()}}
 Plug 'sjl/splice.vim'
 Plug 'tpope/vim-surround'
 Plug 'tpope/vim-repeat'
