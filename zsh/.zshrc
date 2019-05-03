@@ -22,7 +22,7 @@ export NVM_AUTO_USE=true
 HIST_STAMPS="dd.mm.yyyy"
 
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git z sudo brew npm yarn mvn tmux docker kubectl zsh-nvm zsh-completions k alias-tips)
+plugins=(git z sudo brew npm yarn mvn tmux docker kubectl zsh-nvm zsh-completions kubectl alias-tips)
 
 # Automatically start a tmux session on login
 ZSH_TMUX_AUTOSTART="true"
