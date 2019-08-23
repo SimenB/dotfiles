@@ -27,7 +27,7 @@ plugins=(git z sudo brew npm yarn mvn tmux docker kubectl zsh-nvm zsh-completion
 # Automatically start a tmux session on login
 ZSH_TMUX_AUTOSTART="true"
 
-source $ZSH/oh-my-zsh.sh
+. $ZSH/oh-my-zsh.sh
 
 if [[ -n $SSH_CONNECTION ]]; then
   export EDITOR='vim'
@@ -35,15 +35,15 @@ else
   export EDITOR='nvim'
 fi
 
-source $HOME/.zshalias
-[ -s $HOME/.local.zshrc ] && source $HOME/.local.zshrc
+. $HOME/.zshalias
+[ -s $HOME/.local.zshrc ] && . $HOME/.local.zshrc
 
 # ssh
 # export SSH_KEY_PATH="~/.ssh/dsa_id"
 
-[ -s $HOME/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh ] && source $HOME/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
-[ -s $HOME/.zsh/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh ] && source $HOME/.zsh/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
-[ -s $HOME/.zsh-history-substring-search/zsh-history-substring-search.zsh ] && source $HOME/.zsh/zsh-syntax-highlighting/zsh-syntax-highlighting
+[ -s $HOME/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh ] && . $HOME/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
+[ -s $HOME/.zsh/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh ] && . $HOME/.zsh/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+[ -s $HOME/.zsh-history-substring-search/zsh-history-substring-search.zsh ] && . $HOME/.zsh/zsh-syntax-highlighting/zsh-syntax-highlighting
 
 if [ "$(uname)" = "Darwin" ]; then
   # Not needed for now
@@ -58,15 +58,18 @@ fi
 # Useful if you enter your password in a command
 setopt HIST_IGNORE_SPACE
 
-[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+[ -f ~/.fzf.zsh ] && . ~/.fzf.zsh
 
 # Override `-R` from oh-my-zsh
 export LESS="-FRX"
 
-test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
+test -e "${HOME}/.iterm2_shell_integration.zsh" && . "${HOME}/.iterm2_shell_integration.zsh"
 
 # OPAM configuration
 . $HOME/.opam/opam-init/init.zsh > /dev/null 2> /dev/null || true
 
 # added by travis gem
-[ -f $HOME/.travis/travis.sh ] && source $HOME/.travis/travis.sh
+[ -f $HOME/.travis/travis.sh ] && . $HOME/.travis/travis.sh
+
+# expo development
+[ -f $HOME/.nix-profile/etc/profile.d/nix.sh ] && . $HOME/.nix-profile/etc/profile.d/nix.sh
