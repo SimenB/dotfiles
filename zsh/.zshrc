@@ -38,6 +38,8 @@ fi
 . $HOME/.zshalias
 [ -s $HOME/.local.zshrc ] && . $HOME/.local.zshrc
 
+fpath=(~/.zsh/completion $fpath)
+
 # ssh
 # export SSH_KEY_PATH="~/.ssh/dsa_id"
 
