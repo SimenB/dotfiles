@@ -67,9 +67,6 @@ export LESS="-FRX"
 
 test -e "${HOME}/.iterm2_shell_integration.zsh" && . "${HOME}/.iterm2_shell_integration.zsh"
 
-# OPAM configuration
-. $HOME/.opam/opam-init/init.zsh > /dev/null 2> /dev/null || true
-
 # added by travis gem
 [ -f $HOME/.travis/travis.sh ] && . $HOME/.travis/travis.sh
 
