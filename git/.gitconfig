@@ -13,7 +13,7 @@
 	# Prevent showing files whose names contain non-ASCII symbols as unversioned.
 	# http://michael-kuehnel.de/git/2014/11/21/git-mac-osx-and-german-umlaute.html
 	precomposeunicode = false
-	pager = diff-so-fancy | less --tabs=4 -RFX
+	pager = delta
 
 [credential]
 	# Cache password when using https
@@ -96,16 +96,8 @@
 [rebase]
 	autoStash = true
 	autosquash = true
-[pager]
-	log =  diff-so-fancy | less
-	show = diff-so-fancy | less
-	diff = diff-so-fancy | less
-# [interactive]
-# 	diffFilter = diff-so-fancy --patch-mode | less --tabs=4 -RFX
-[diff-so-fancy]
-	first-run = false
-[log]
-	date = iso-local
+[interactive]
+ 	diffFilter = delta --color-only
 [github]
 	username = SimenB
 [fetch]
