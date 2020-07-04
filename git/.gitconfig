@@ -13,7 +13,7 @@
 	# Prevent showing files whose names contain non-ASCII symbols as unversioned.
 	# http://michael-kuehnel.de/git/2014/11/21/git-mac-osx-and-german-umlaute.html
 	precomposeunicode = false
-	pager = delta --theme='dimmed-monokai'
+	pager = delta
 
 [credential]
 	# Cache password when using https
@@ -97,7 +97,7 @@
 	autoStash = true
 	autosquash = true
 [interactive]
-	diffFilter = delta --color-only --theme='dimmed-monokai'
+	diffFilter = delta --color-only
 [github]
 	username = SimenB
 [fetch]
@@ -106,3 +106,7 @@
 	gpgsign = true
 [transfer]
 	fsckObjects = true
+[delta]
+	theme = "dimmed-monokai"
+	line-numbers = true
+	navigate = true
