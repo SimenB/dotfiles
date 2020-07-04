@@ -43,6 +43,7 @@
 
 [pull]
 	default = current
+	rebase = true
 
 [branch]
 	autosetuprebase = always
