@@ -110,3 +110,5 @@
 [delta]
 	theme = "dimmed-monokai"
 	line-numbers = true
+[init]
+	defaultBranch = main
