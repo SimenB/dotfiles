@@ -110,5 +110,7 @@
 [delta]
 	theme = "dimmed-monokai"
 	line-numbers = true
+	max-line-length = 3024
+	navigate = true
 [init]
 	defaultBranch = main
