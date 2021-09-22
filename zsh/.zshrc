@@ -22,7 +22,7 @@ export NVM_AUTO_USE=true
 HIST_STAMPS="dd.mm.yyyy"
 
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git z sudo brew npm yarn tmux docker kubectl zsh-nvm zsh-completions kubectl alias-tips)
+plugins=(git z sudo brew npm yarn tmux docker kubectl zsh-nvm zsh-completions kubectl alias-tips rust cargo rustup)
 
 # Automatically start a tmux session on login
 ZSH_TMUX_AUTOSTART="true"
@@ -72,3 +72,6 @@ test -e "${HOME}/.iterm2_shell_integration.zsh" && . "${HOME}/.iterm2_shell_inte
 
 # expo development
 [ -f $HOME/.nix-profile/etc/profile.d/nix.sh ] && . $HOME/.nix-profile/etc/profile.d/nix.sh
+
+# rust & cargo stuff
+[ -f $HOME/.cargo/env ] && . $HOME/.cargo/env
