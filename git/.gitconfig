@@ -112,5 +112,6 @@
 	line-numbers = true
 	max-line-length = 3024
 	navigate = true
+	hyperlinks = true
 [init]
 	defaultBranch = main
