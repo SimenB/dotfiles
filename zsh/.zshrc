@@ -1,7 +1,7 @@
 # Path to your oh-my-zsh installation.
 export ZSH=$HOME/.oh-my-zsh
 
-ZSH_THEME="agnoster"
+# ZSH_THEME="agnoster"
 
 # Make sure to just correct commands, not arguments
 # http://superuser.com/a/610025/365668
@@ -69,3 +69,5 @@ setopt HIST_IGNORE_SPACE
 
 # Override `-R` from oh-my-zsh
 export LESS="-FRX"
+
+eval "$(starship init zsh)"
