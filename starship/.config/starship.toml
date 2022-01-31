@@ -8,5 +8,8 @@ format = '([\[$conflicted$deleted$renamed$modified$staged$untracked$ahead_behind
 [hostname]
 ssh_only = true
 
+[status]
+disabled = false
+
 [time]
 disabled = false
