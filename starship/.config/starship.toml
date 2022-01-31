@@ -1,0 +1,12 @@
+[gcloud]
+disabled = true
+
+[git_status]
+# without $stashed
+format = '([\[$conflicted$deleted$renamed$modified$staged$untracked$ahead_behind\]]($style) )'
+
+[hostname]
+ssh_only = true
+
+[time]
+disabled = false
