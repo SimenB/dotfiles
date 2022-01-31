@@ -4,6 +4,9 @@ disabled = true
 [git_status]
 # without $stashed
 format = '([\[$conflicted$deleted$renamed$modified$staged$untracked$ahead_behind\]]($style) )'
+ahead = "⇡${count}"
+diverged = "⇕⇡${ahead_count}⇣${behind_count}"
+behind = "⇣${count}"
 
 [hostname]
 ssh_only = true
