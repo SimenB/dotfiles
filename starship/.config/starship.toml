@@ -16,6 +16,8 @@ ssh_only = true
 
 [status]
 disabled = false
+map_symbol = true
+pipestatus = true
 
 [time]
 disabled = false
