@@ -1,6 +1,10 @@
 [[battery.display]]
 threshold = 50
 
+[directory]
+# In practice, never truncate (it will still truncate to repo root)
+truncation_length = 100
+
 [gcloud]
 disabled = true
 
