@@ -21,7 +21,7 @@ export NVM_LAZY_LOAD=true
 HIST_STAMPS="dd.mm.yyyy"
 
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git z sudo brew npm yarn tmux docker kubectl zsh-nvm zsh-completions alias-tips rust)
+plugins=(git git-auto-fetch z sudo brew npm yarn tmux docker kubectl zsh-nvm zsh-completions alias-tips rust)
 
 # Automatically start a tmux session on login, unless it's from a JetBrains IDE
 if [ "$TERMINAL_EMULATOR" != "JetBrains-JediTerm" ]; then
