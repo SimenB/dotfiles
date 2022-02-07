@@ -23,7 +23,7 @@ zstyle ':omz:plugins:yarn' global-path false
 HIST_STAMPS="dd.mm.yyyy"
 
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git git-auto-fetch z sudo brew npm yarn tmux docker kubectl zsh-nvm zsh-completions alias-tips rust)
+plugins=(git git-auto-fetch sudo brew npm yarn tmux docker kubectl zsh-nvm zsh-completions alias-tips rust)
 
 # Automatically start a tmux session on login, unless it's from a JetBrains IDE
 if [ "$TERMINAL_EMULATOR" != "JetBrains-JediTerm" ]; then
@@ -70,5 +70,7 @@ setopt HIST_IGNORE_SPACE
 
 # Override `-R` from oh-my-zsh
 export LESS="-FRX"
+
+eval "$(zoxide init zsh)"
 
 eval "$(starship init zsh)"
