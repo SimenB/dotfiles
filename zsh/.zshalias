@@ -1,9 +1,5 @@
 alias npm-pack-info='tarball="$(npm pack .)"; wc -c "${tarball}"; tar tvf "${tarball}"; rm "${tarball}";'
 
-# Git
-# https://github.com/robbyrussell/oh-my-zsh/pull/6031
-alias gwip='git add -A; git rm $(git ls-files --deleted) 2> /dev/null; git commit --no-verify --no-gpg-sign -m "--wip-- [skip ci]"'
-
 if [ "$(uname)" = "Darwin" ]; then
 	alias fuck='$(thefuck $(fc -ln -1))'
 elif [ "$(expr substr $(uname -s) 1 5)" = "Linux" ]; then
@@ -45,4 +41,4 @@ alias ls="exa --icons --group-directories-first"
 alias tree="ls --tree"
 alias ping="gping"
 
-alias uuid="uuidgen | tr -d '\n' | tr '[:upper:]' '[:lower:]'  | pbcopy && pbpaste && echo"
+alias uuid="uuidgen | tr -d '\n' | tr '[:upper:]' '[:lower:]' | pbcopy && pbpaste && echo"
