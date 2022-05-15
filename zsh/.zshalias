@@ -1,4 +1,4 @@
-alias npm-pack-info='tarball="$(npm pack .)"; wc -c "${tarball}"; tar tvf "${tarball}"; rm "${tarball}";'
+alias npm-pack-info='echo "Use npm pack --dry-run" && return 1'
 
 if [ "$(uname)" = "Darwin" ]; then
 	alias fuck='$(thefuck $(fc -ln -1))'
