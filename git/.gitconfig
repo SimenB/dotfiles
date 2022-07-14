@@ -119,3 +119,5 @@
 	conflictstyle = diff3
 [advice]
 	skippedCherryPicks = false
+[add.interactive]
+	useBuiltin = false
