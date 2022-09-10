@@ -31,9 +31,11 @@ alias kstaging='kcon gke_crested-disk-192509_europe-west1-b_staging'
 alias kdev='kcon gke_crested-disk-192509_europe-west1-b_dev'
 
 # Watch
-# These exist so alias expansion works when using watch
-alias watch='watch '
-alias watchd='watch -d '
+# These exist so alias expansion works when using viddy
+alias viddy="viddy "
+alias viddyd="viddy -d "
+alias watch='echo use viddy; return 1;'
+alias watchd='echo use viddyd; return 1;'
 
 alias dedupe-yarn='echo use yarn-deduplicate; return 1;'
 
