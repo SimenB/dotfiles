@@ -18,3 +18,5 @@ export BAT_CONFIG_PATH="$HOME/.config/bat/batrc"
 # python needs to be python 2
 export PATH=/System/Library/Frameworks/Python.framework/Versions/Current/bin:$PATH
 export NVM_SYMLINK_CURRENT=true
+
+export USE_GKE_GCLOUD_AUTH_PLUGIN=True
