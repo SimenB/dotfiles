@@ -20,3 +20,5 @@ export PATH=/System/Library/Frameworks/Python.framework/Versions/Current/bin:$PA
 export NVM_SYMLINK_CURRENT=true
 
 export USE_GKE_GCLOUD_AUTH_PLUGIN=True
+
+export GEM_HOME="$HOME/.gem"
