@@ -7,4 +7,5 @@ Thumbs.db
 .Trashes
 .idea/
 *.iml
+.fleet/
 
