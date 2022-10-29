@@ -114,6 +114,7 @@
 	username = SimenB
 [fetch]
 	prune = true
+	showForcedUpdates = true
 [commit]
 	gpgsign = true
 [transfer]
