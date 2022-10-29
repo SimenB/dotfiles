@@ -106,7 +106,7 @@
 	all = true
 [rebase]
 	autoStash = true
-	autosquash = true
+	autoSquash = true
 	updateRefs = true
 [interactive]
 	diffFilter = delta --color-only
