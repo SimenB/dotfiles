@@ -74,3 +74,6 @@ export LESS="-FRX"
 eval "$(zoxide init zsh)"
 
 eval "$(starship init zsh)"
+
+EAS_AC_ZSH_SETUP_PATH=/Users/simen/Library/Caches/eas-cli/autocomplete/zsh_setup && test -f $EAS_AC_ZSH_SETUP_PATH && source $EAS_AC_ZSH_SETUP_PATH; # eas autocomplete setup
+
