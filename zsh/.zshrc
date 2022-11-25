@@ -26,7 +26,7 @@ HIST_STAMPS="dd.mm.yyyy"
 plugins=(git git-auto-fetch sudo brew npm yarn tmux docker kubectl zsh-nvm zsh-completions alias-tips rust)
 
 # Automatically start a tmux session on login, unless it's from a JetBrains IDE
-if [ "$TERMINAL_EMULATOR" != "JetBrains-JediTerm" ]; then
+if [[ "$TERMINAL_EMULATOR" != "JetBrains-JediTerm" && "$TERM_PROGRAM" != "Jetbrains.Fleet" ]]; then
    ZSH_TMUX_AUTOSTART=true
 fi
 
