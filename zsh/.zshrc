@@ -81,3 +81,5 @@ EAS_AC_ZSH_SETUP_PATH=/Users/simen/Library/Caches/eas-cli/autocomplete/zsh_setup
 
 
 source /Users/simen/.docker/init-zsh.sh || true # Added by Docker Desktop
+
+eval "$(github-copilot-cli alias -- "$0")"
