@@ -27,7 +27,6 @@ Plug 'tpope/vim-fugitive'
 Plug 'editorconfig/editorconfig-vim'
 Plug 'mattn/emmet-vim', { 'for': 'html' }
 Plug 'sickill/vim-pasta'
-Plug 'regedarek/ZoomWin'
 Plug 'tomtom/tcomment_vim'
 Plug 'tmux-plugins/vim-tmux-focus-events'
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
@@ -41,6 +40,7 @@ Plug 'tmux-plugins/vim-tmux', { 'for': 'tmux' }
 Plug 'tweekmonster/startuptime.vim'
 Plug 'w0rp/ale'
 Plug 'sheerun/vim-polyglot'
+Plug 'nanotee/zoxide.vim'
 call plug#end()
 
 colorscheme molokai
