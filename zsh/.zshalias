@@ -48,3 +48,5 @@ alias ping="gping"
 alias uuid="uuidgen | tr -d '\n' | tr '[:upper:]' '[:lower:]' | pbcopy && pbpaste && echo"
 
 alias sed='echo use sd; return 1;'
+
+alias cloc='echo use tokei; return 1;'
