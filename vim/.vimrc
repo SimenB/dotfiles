@@ -43,9 +43,7 @@ Plug 'sheerun/vim-polyglot'
 Plug 'nanotee/zoxide.vim'
 call plug#end()
 
-colorscheme molokai
-" Set background color of molokai to gray
-let g:molokai_original = 1
+colorscheme monokai
 
 " Make Vim more useful
 set nocompatible
