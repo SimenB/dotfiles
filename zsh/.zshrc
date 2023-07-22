@@ -79,7 +79,6 @@ eval "$(mcfly init zsh)"
 
 EAS_AC_ZSH_SETUP_PATH=/Users/simen/Library/Caches/eas-cli/autocomplete/zsh_setup && test -f $EAS_AC_ZSH_SETUP_PATH && source $EAS_AC_ZSH_SETUP_PATH; # eas autocomplete setup
 
-
-source /Users/simen/.docker/init-zsh.sh || true # Added by Docker Desktop
+[ -f $HOME/.docker/init-zsh.sh ] && source $HOME/.docker/init-zsh.sh || true # Added by Docker Desktop
 
 eval "$(github-copilot-cli alias -- "$0")"
