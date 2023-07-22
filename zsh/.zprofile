@@ -29,3 +29,7 @@ export PATH=$PATH:$ANDROID_SDK_ROOT/platform-tools
 
 export GOHOME=$HOME/go
 export PATH=$PATH:$GOHOME/bin
+
+# Added by Toolbox App
+export PATH="$PATH:$HOME/Library/Application Support/JetBrains/Toolbox/scripts"
+
