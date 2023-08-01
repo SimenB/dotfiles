@@ -21,8 +21,6 @@ export NVM_SYMLINK_CURRENT=true
 
 export USE_GKE_GCLOUD_AUTH_PLUGIN=True
 
-export GEM_HOME="$HOME/.gem"
-
 export ANDROID_SDK_ROOT=$HOME/Library/Android/sdk
 export PATH=$PATH:$ANDROID_SDK_ROOT/emulator
 export PATH=$PATH:$ANDROID_SDK_ROOT/platform-tools
