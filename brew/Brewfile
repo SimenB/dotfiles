@@ -62,7 +62,7 @@ brew "imagemagick"
 brew "jenv"
 brew "jpeg", link: true
 brew "jq"
-brew "kubernetes-cli", link: false
+brew "k9s"
 brew "ncurses"
 brew "less"
 brew "librsvg"
