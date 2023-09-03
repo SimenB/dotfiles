@@ -1,6 +1,9 @@
 # Because who cares about case!?
 --smart-case
 
+# Longer lines than this is useless
+--max-columns=256
+
 # zsh type
 --type-add
 zsh:*.zsh
