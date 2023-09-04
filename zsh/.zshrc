@@ -23,7 +23,12 @@ zstyle ':omz:plugins:yarn' global-path false
 HIST_STAMPS="dd.mm.yyyy"
 
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git git-auto-fetch sudo brew npm yarn docker kubectl zsh-nvm zsh-completions alias-tips rust ripgrep rbenv rails)
+plugins=(git git-auto-fetch sudo brew npm yarn tmux docker kubectl zsh-nvm zsh-completions alias-tips rust ripgrep rbenv rails)
+
+# Automatically start a tmux session on login, unless it's from a JetBrains IDE
+if [[ "$TERMINAL_EMULATOR" != "JetBrains-JediTerm" && "$TERM_PROGRAM" != "Jetbrains.Fleet" ]]; then
+   ZSH_TMUX_AUTOSTART=true
+fi
 
 . $ZSH/oh-my-zsh.sh
 
@@ -65,11 +70,6 @@ setopt HIST_IGNORE_SPACE
 
 # Override `-R` from oh-my-zsh
 export LESS="-FRX"
-
-# Automatically start a zellij session on login, unless it's from a JetBrains IDE
-if [[ "$TERMINAL_EMULATOR" != "JetBrains-JediTerm" && "$TERM_PROGRAM" != "Jetbrains.Fleet" ]]; then
-  eval "$(zellij setup --generate-auto-start zsh)"
-fi
 
 eval "$(zoxide init zsh)"
 

@@ -31,5 +31,3 @@ export PATH=$PATH:$GOHOME/bin
 # Added by Toolbox App
 export PATH="$PATH:$HOME/Library/Application Support/JetBrains/Toolbox/scripts"
 
-export ZELLIJ_AUTO_ATTACH="true"
-export ZELLIJ_AUTO_EXIT="true"
