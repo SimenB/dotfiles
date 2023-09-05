@@ -2,7 +2,7 @@
 --smart-case
 
 # Longer lines than this is useless
---max-columns=256
+--max-columns=1000
 
 # zsh type
 --type-add
