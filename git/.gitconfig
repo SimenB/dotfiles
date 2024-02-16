@@ -127,9 +127,8 @@
 	hyperlinks = true
 [init]
 	defaultBranch = main
+	templateDir = /Users/simen/.git-templates/git-secrets
 [merge]
 	conflictstyle = diff3
 [advice]
 	skippedCherryPicks = false
-[add.interactive]
-	useBuiltin = false
