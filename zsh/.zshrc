@@ -10,8 +10,6 @@ unsetopt correct_all
 setopt correct
 
 COMPLETION_WAITING_DOTS="true"
-export NVM_DIR=~/.nvm
-export NVM_LAZY_LOAD=true
 # disable adding yarn globals to $PATH
 zstyle ':omz:plugins:yarn' global-path false
 
@@ -23,7 +21,7 @@ zstyle ':omz:plugins:yarn' global-path false
 HIST_STAMPS="dd.mm.yyyy"
 
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git git-auto-fetch sudo brew npm yarn tmux docker kubectl zsh-nvm zsh-completions alias-tips rust ripgrep rbenv rails gh)
+plugins=(git git-auto-fetch sudo brew npm yarn tmux docker kubectl fnm zsh-completions alias-tips rust ripgrep rbenv rails gh)
 
 # Automatically start a tmux session on login, unless it's from a JetBrains IDE
 if [[ "$TERMINAL_EMULATOR" != "JetBrains-JediTerm" && "$TERM_PROGRAM" != "Jetbrains.Fleet" ]]; then
@@ -76,6 +74,8 @@ eval "$(zoxide init zsh)"
 eval "$(starship init zsh)"
 
 eval "$(mcfly init zsh)"
+
+eval "$(fnm env --corepack-enabled)"
 
 EAS_AC_ZSH_SETUP_PATH=/Users/simen/Library/Caches/eas-cli/autocomplete/zsh_setup && test -f $EAS_AC_ZSH_SETUP_PATH && source $EAS_AC_ZSH_SETUP_PATH; # eas autocomplete setup
 
