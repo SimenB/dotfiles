@@ -27,6 +27,7 @@ alias simulator='open /Applications/Xcode.app/Contents/Developer/Applications/Si
 # Kubernetes
 alias kcon='kubectl --context'
 alias kprod='kcon ***REMOVED*** --namespace prd'
+alias kprodus='kcon ***REMOVED*** --namespace prd-us'
 alias kstaging='kcon ***REMOVED*** --namespace stg'
 alias kdev='kcon ***REMOVED*** --namespace simenb'
 
