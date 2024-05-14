@@ -52,4 +52,8 @@ alias sed='echo use sd; return 1;'
 
 alias cloc='echo use tokei; return 1;'
 
-# alias nvm='echo use fnm; return 1;'
+alias nvm='echo use fnm; return 1;'
+
+alias http='echo use xh; return 1;'
+
+alias tree='echo use br (broot); return 1;'
