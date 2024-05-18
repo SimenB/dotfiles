@@ -40,6 +40,7 @@ fi
 [ -s $HOME/.local.zshrc ] && . $HOME/.local.zshrc
 
 fpath=(~/.zsh/completion $fpath)
+FPATH="$(brew --prefix)/share/zsh/site-functions:${FPATH}"
 
 # ssh
 # export SSH_KEY_PATH="~/.ssh/dsa_id"
