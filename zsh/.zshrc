@@ -21,7 +21,7 @@ zstyle ':omz:plugins:yarn' global-path false
 HIST_STAMPS="dd.mm.yyyy"
 
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git git-auto-fetch sudo brew npm yarn tmux docker kubectl fnm zsh-completions alias-tips rust ripgrep rbenv rails gh)
+plugins=(git git-auto-fetch sudo brew npm yarn tmux docker kubectl fnm zsh-completions alias-tips rust rbenv rails gh)
 
 # Automatically start a tmux session on login, unless it's from a JetBrains IDE
 if [[ "$TERMINAL_EMULATOR" != "JetBrains-JediTerm" && "$TERM_PROGRAM" != "Jetbrains.Fleet" ]]; then
