@@ -1,6 +1,9 @@
 # Path to your oh-my-zsh installation.
 export ZSH=$HOME/.oh-my-zsh
 
+fpath=(~/.zsh/completion $fpath)
+FPATH="$(brew --prefix)/share/zsh/site-functions:${FPATH}"
+
 # ZSH_THEME="agnoster"
 
 # Make sure to just correct commands, not arguments
@@ -38,9 +41,6 @@ fi
 
 . $HOME/.zshalias
 [ -s $HOME/.local.zshrc ] && . $HOME/.local.zshrc
-
-fpath=(~/.zsh/completion $fpath)
-FPATH="$(brew --prefix)/share/zsh/site-functions:${FPATH}"
 
 # ssh
 # export SSH_KEY_PATH="~/.ssh/dsa_id"
