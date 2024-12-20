@@ -31,3 +31,5 @@ export PATH="$PATH:$HOME/Library/Application Support/JetBrains/Toolbox/scripts"
 # Make sure stuff installed with brew takes priority
 export PATH="/opt/homebrew/bin:$PATH"
 export PATH="/opt/homebrew/sbin:$PATH"
+
+export PATH="/opt/homebrew/opt/postgresql@16/bin:$PATH"
