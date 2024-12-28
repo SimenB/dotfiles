@@ -26,8 +26,8 @@ HIST_STAMPS="dd.mm.yyyy"
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(git git-auto-fetch sudo brew npm yarn tmux docker kubectl fnm zsh-completions alias-tips rust rbenv rails gh)
 
-# Automatically start a tmux session on login, unless it's from a JetBrains IDE
-if [[ "$TERMINAL_EMULATOR" != "JetBrains-JediTerm" && "$TERM_PROGRAM" != "Jetbrains.Fleet" ]]; then
+# Automatically start a tmux session on login, unless it's from a JetBrains IDE or using ghostty
+if [[ "$TERMINAL_EMULATOR" != "JetBrains-JediTerm" && "$TERM_PROGRAM" != "Jetbrains.Fleet" && "$TERM" != "xterm-ghostty" ]]; then
    ZSH_TMUX_AUTOSTART=true
 fi
 
