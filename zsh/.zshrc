@@ -74,7 +74,7 @@ eval "$(zoxide init zsh)"
 
 eval "$(starship init zsh)"
 
-eval "$(mcfly init zsh)"
+eval "$(atuin init zsh)"
 
 eval "$(fnm env --corepack-enabled)"
 
