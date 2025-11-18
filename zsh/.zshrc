@@ -76,7 +76,7 @@ eval "$(starship init zsh)"
 
 eval "$(atuin init zsh)"
 
-eval "$(fnm env --corepack-enabled)"
+eval "$(fnm env --corepack-enabled --use-on-cd --shell zsh)"
 
 EAS_AC_ZSH_SETUP_PATH=$HOME/Library/Caches/eas-cli/autocomplete/zsh_setup && test -f $EAS_AC_ZSH_SETUP_PATH && source $EAS_AC_ZSH_SETUP_PATH; # eas autocomplete setup
 
