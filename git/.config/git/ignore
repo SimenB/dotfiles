@@ -8,4 +8,4 @@ Thumbs.db
 .idea/
 *.iml
 .fleet/
-
+**/.claude/settings.local.json
