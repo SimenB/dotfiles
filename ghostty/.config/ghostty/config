@@ -14,3 +14,4 @@ keybind = ctrl+b>-=new_split:down
 keybind = ctrl+b>shift+\=new_split:right
 keybind = ctrl+b>z=toggle_split_zoom
 keybind = global:cmd+grave_accent=toggle_quick_terminal
+keybind = shift+enter=text:\x1b\r
