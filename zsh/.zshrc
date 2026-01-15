@@ -39,7 +39,9 @@ else
   export EDITOR='nvim'
 fi
 
-. $HOME/.zshalias
+if [[ -z "$CLAUDECODE" ]]; then
+  . $HOME/.zshalias
+fi
 [ -s $HOME/.local.zshrc ] && . $HOME/.local.zshrc
 
 # ssh
