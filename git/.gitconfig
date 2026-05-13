@@ -27,10 +27,6 @@
 	# Detect whitespace errors when applying a patch
 	whitespace = fix
 
-[http]
-	# Screw security, amirite?
-	sslVerify = false
-
 [color]
 	branch = auto
 	diff = auto
@@ -51,8 +47,8 @@
 
 [diff]
 	mnemonicprefix = true
-	compactionHeuristic = true
 	tool = difftastic
+	algorithm = histogram
 
 [difftool]
 	prompt = false
@@ -67,6 +63,7 @@
 	# A must when rebasing
 	# Stands for "remember recorded resolution"
 	enabled = true
+	autoupdate = true
 
 [alias]
 	nice			= !echo use glog
@@ -109,6 +106,7 @@
 	autoStash = true
 	autoSquash = true
 	updateRefs = true
+	missingCommitsCheck = warn
 [interactive]
 	diffFilter = delta --color-only
 [github]
@@ -117,8 +115,11 @@
 	prune = true
 	showForcedUpdates = true
 	fsckobjects = false
+	writeCommitGraph = true
 [commit]
 	gpgsign = true
+	verbose = true
+	cleanup = scissors
 [transfer]
 	fsckObjects = true
 [delta]
@@ -131,10 +132,17 @@
 	defaultBranch = main
 	templateDir = /Users/simen/.git-templates/git-secrets
 [merge]
-	conflictstyle = diff3
+	conflictstyle = zdiff3
+	directoryRenames = true
 [advice]
 	skippedCherryPicks = false
 [fsck]
 	zeroPaddedFilemode = ignore
 [receive]
 	fsckobjects = false
+[log]
+	date = iso-strict-local
+[column]
+	ui = auto
+[safe]
+	bareRepository = explicit
