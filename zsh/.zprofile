@@ -1,3 +1,7 @@
+# The following lines were added by Docker Desktop to add commands to your PATH.
+export PATH="$PATH:/Users/simen/.docker/bin"
+# End of Docker Desktop section.
+
 export PATH=${PATH}:~/.scripts
 export PATH=${PATH}:~/npm/bin
 export PATH="/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/sbin:$PATH"
