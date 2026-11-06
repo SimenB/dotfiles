@@ -36,6 +36,6 @@ export PATH="$PATH:$HOME/Library/Application Support/JetBrains/Toolbox/scripts"
 export PATH="/opt/homebrew/bin:$PATH"
 export PATH="/opt/homebrew/sbin:$PATH"
 
-export PATH="/opt/homebrew/opt/postgresql@17/bin:$PATH"
-
 export PATH="$HOME/.local/bin:$PATH"
+
+eval "$(mise activate zsh --shims)"
