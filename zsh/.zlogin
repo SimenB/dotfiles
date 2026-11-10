@@ -7,6 +7,3 @@ test -e "${HOME}/.iterm2_shell_integration.zsh" && . "${HOME}/.iterm2_shell_inte
 
 # expo development
 [ -f $HOME/.nix-profile/etc/profile.d/nix.sh ] && . $HOME/.nix-profile/etc/profile.d/nix.sh
-
-# rust & cargo stuff
-[ -f $HOME/.cargo/env ] && . $HOME/.cargo/env
