@@ -1,0 +1,61 @@
+alias npm-pack-info='echo "Use npm pack --dry-run" && return 1'
+
+if [ "$(uname)" = "Darwin" ]; then
+	alias fuck='$(thefuck $(fc -ln -1))'
+elif [ "$(expr substr $(uname -s) 1 5)" = "Linux" ]; then
+	alias fuck='eval $(thefuck $(fc -ln -1))'
+elif [ "$(expr substr $(uname -s) 1 10)" = "MINGW32_NT" ]; then
+	# Do something under Windows NT platform
+fi
+
+alias ccat="echo use bat; return 1;"
+alias cat="echo use bat; return 1;"
+
+alias du="echo use dust; return 1;"
+
+alias vim=nvim
+
+# Docker
+alias drmae='docker rm $(docker ps --quiet --all --no-trunc --filter "status=exited")'
+alias drmi='docker rmi $(docker images --quiet --no-trunc --filter "dangling=true")'
+alias dritrm='docker run --interactive --tty --rm' #-it
+alias dritd='docker run --interactive --tty -d' #-it
+
+# iOS
+alias simulator='open /Applications/Xcode.app/Contents/Developer/Applications/Simulator.app'
+
+# Kubernetes
+alias kcon='kubectl --context'
+alias kprod='kcon ***REMOVED*** --namespace prd'
+alias kprodus='kcon ***REMOVED*** --namespace prd-us'
+alias kstaging='kcon ***REMOVED*** --namespace stg'
+alias kdev='kcon ***REMOVED*** --namespace simenb'
+
+# Watch
+# These exist so alias expansion works when using viddy
+alias viddy="viddy "
+alias viddyd="viddy -d "
+alias watch='echo use viddy; return 1;'
+alias watchd='echo use viddyd; return 1;'
+
+alias dedupe-yarn='echo use yarn-deduplicate; return 1;'
+
+alias htop='echo use btm; return 1;'
+
+alias ls="eza --icons --group-directories-first"
+alias ping="gping"
+
+alias uuid="uuidgen | tr -d '\n' | tr '[:upper:]' '[:lower:]' | pbcopy && pbpaste && echo"
+
+alias sed='echo use sd; return 1;'
+
+alias cloc='echo use tokei; return 1;'
+
+alias nvm='echo use mise; return 1;'
+alias fnm='echo use mise; return 1;'
+
+alias http='echo use xh; return 1;'
+
+alias tree='echo use br \(broot\); return 1;'
+
+alias youtube-dl='echo use yt-dlp; return 1;'
