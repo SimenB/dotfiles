@@ -26,10 +26,6 @@ alias simulator='open /Applications/Xcode.app/Contents/Developer/Applications/Si
 
 # Kubernetes
 alias kcon='kubectl --context'
-alias kprod='kcon ***REMOVED*** --namespace prd'
-alias kprodus='kcon ***REMOVED*** --namespace prd-us'
-alias kstaging='kcon ***REMOVED*** --namespace stg'
-alias kdev='kcon ***REMOVED*** --namespace simenb'
 
 # Watch
 # These exist so alias expansion works when using viddy
@@ -59,3 +55,5 @@ alias http='echo use xh; return 1;'
 alias tree='echo use br \(broot\); return 1;'
 
 alias youtube-dl='echo use yt-dlp; return 1;'
+
+[ -f ~/.zshalias.work ] && . ~/.zshalias.work
