@@ -1,5 +1,6 @@
 #!/bin/sh
-# Daily repo sync for launchd: runs mr update over ~/repos and posts a macOS notification
+# Daily repo sync for launchd: runs mr update over ~/repos, fast-forwards the checkouts declared
+# in mise's [bootstrap.repos] (oh-my-zsh, zsh and tmux plugins), and posts a macOS notification
 # when anything needs a look (a branch left behind, a git error, a failed repo, an unarchived repo).
 # A clean run is silent. Logs are kept per day for 30 days under ~/Library/Logs/mr-update/.
 # If GitHub is unreachable, it waits up to two hours before giving up for the day.
@@ -49,6 +50,7 @@ first_line=$(( $(wc -l < "$log") + 1 ))
 {
   echo "run started $(date +%H:%M:%S)"
   gtimeout 3h mr -d "$HOME/repos" update || echo "fatal: mr exited with status $? (3h cap or failure)"
+  gtimeout 30m "$HOME/.local/bin/mise" bootstrap repos update || echo "fatal: mise bootstrap repos update exited with status $? (30m cap or failure)"
   echo "run ended $(date +%H:%M:%S)"
 } >> "$log" 2>&1
 
