@@ -9,7 +9,7 @@ github.credential_command = "gh auth token"
 dotfiles.root = "~/repos/dotfiles"
 
 [bootstrap]
-dotfile_groups = ["bat", "functions", "ghostty", "git", "gpg", "iterm2", "karabiner", "mise-work", "mr", "nano", "ripgrep", "scripts", "tmux", "urxvt", "vim", "zellij", "zsh"]
+dotfile_groups = ["atuin", "bat", "functions", "ghostty", "git", "gpg", "iterm2", "karabiner", "mise-work", "mr", "nano", "ripgrep", "scripts", "tmux", "urxvt", "vim", "yt-dlp", "zellij", "zsh"]
 
 [bootstrap.repos]
 "~/.oh-my-zsh" = { url = "https://github.com/ohmyzsh/ohmyzsh.git" }
