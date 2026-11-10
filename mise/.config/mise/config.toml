@@ -1,0 +1,213 @@
+[settings]
+self_update.auto = true
+tool_update.global_auto = true
+
+idiomatic_version_file_enable_tools = ["go", "java", "node" ,"npm", "pnpm", "python", "ruby", "ruff", "rust", "yarn"]
+
+github.credential_command = "gh auth token"
+
+dotfiles.root = "~/repos/dotfiles"
+
+[bootstrap]
+dotfile_groups = ["bat", "functions", "ghostty", "git", "gpg", "iterm2", "karabiner", "mise", "mise-work", "mr", "nano", "ripgrep", "scripts", "tmux", "urxvt", "vim", "zellij", "zsh"]
+
+[bootstrap.repos]
+"~/.oh-my-zsh" = { url = "https://github.com/ohmyzsh/ohmyzsh.git" }
+"~/.oh-my-zsh/custom/plugins/alias-tips" = { url = "git@github.com:djui/alias-tips" }
+"~/.oh-my-zsh/custom/plugins/zsh-completions" = { url = "git@github.com:zsh-users/zsh-completions" }
+"~/.tmux/plugins/tpm" = { url = "git@github.com:tmux-plugins/tpm" }
+"~/.zsh/zsh-autosuggestions" = { url = "git@github.com:zsh-users/zsh-autosuggestions" }
+"~/.zsh/zsh-history-substring-search" = { url = "git@github.com:zsh-users/zsh-history-substring-search" }
+"~/.zsh/zsh-syntax-highlighting" = { url = "git@github.com:zsh-users/zsh-syntax-highlighting.git" }
+
+[bootstrap.mise_shell_activate]
+zsh = true
+
+[dotfile_groups.iterm2]
+root = "iterm2"
+mode = "copy"
+
+[dotfile_groups.karabiner]
+root = "karabiner"
+mode = "copy"
+
+[dotfile_groups.mise-work]
+root = "~/repos/dotfiles-work/mise"
+
+[dotfiles]
+"~/.config/starship.toml" = { source = "~/repos/dotfiles/starship/.config/starship.toml", mode = "template" }
+
+[bootstrap.brew]
+adopt = true
+homebrew_metadata = true
+
+[bootstrap.brew.taps]
+"browsh-org/browsh" = "https://github.com/browsh-org/homebrew-browsh.git"
+"dtan4/dtan4" = "https://github.com/dtan4/homebrew-dtan4.git"
+"gromgit/fuse" = "https://github.com/gromgit/homebrew-fuse.git"
+
+[bootstrap.packages]
+"brew-cask:amethyst" = "latest"
+"brew-cask:android-platform-tools" = "latest"
+"brew-cask:claude" = "latest"
+"brew-cask:claude-code" = "latest"
+"brew-cask:docker-desktop" = "latest"
+"brew-cask:figma" = "latest"
+"brew-cask:firefox" = "latest"
+"brew-cask:font-fira-code-nerd-font" = "latest"
+"brew-cask:font-hasklug-nerd-font" = "latest"
+"brew-cask:font-jetbrains-mono-nerd-font" = "latest"
+"brew-cask:font-monaspace" = "latest"
+"brew-cask:ghostty" = "latest"
+"brew-cask:google-chrome" = "latest"
+"brew-cask:handbrake-app" = "latest"
+"brew-cask:iterm2" = "latest"
+"brew-cask:jetbrains-toolbox" = "latest"
+"brew-cask:karabiner-elements" = "latest"
+"brew-cask:keycastr" = "latest"
+"brew-cask:macfuse" = "latest"
+"brew-cask:microsoft-auto-update" = "latest"
+"brew-cask:microsoft-teams" = "latest"
+"brew-cask:middleclick" = "latest"
+"brew-cask:ngrok" = "latest"
+"brew-cask:obsidian" = "latest"
+"brew-cask:plex-media-server" = "latest"
+"brew-cask:postman" = "latest"
+"brew-cask:proton-pass" = "latest"
+"brew-cask:protonvpn" = "latest"
+"brew-cask:qlmarkdown" = "latest"
+"brew-cask:quicklook-video" = "latest"
+"brew-cask:raycast" = "latest"
+"brew-cask:slack" = "latest"
+"brew-cask:sony-ps-remote-play" = "latest"
+"brew-cask:steam" = "latest"
+"brew-cask:suspicious-package" = "latest"
+"brew-cask:swiftformat-for-xcode" = "latest"
+"brew-cask:tailscale-app" = "latest"
+"brew-cask:teamviewer" = "latest"
+"brew-cask:the-unarchiver" = "latest"
+"brew-cask:tor-browser" = "latest"
+"brew-cask:utm" = "latest"
+"brew-cask:visual-studio-code" = "latest"
+"brew-cask:vlc" = "latest"
+"brew-cask:warp" = "latest"
+"brew-cask:xquartz" = "latest"
+"brew-cask:zed" = "latest"
+"brew-cask:zen" = "latest"
+"brew:aria2" = "latest"
+"brew:atool" = "latest"
+"brew:autossh" = "latest"
+"brew:browsh-org/browsh/browsh" = "latest"
+"brew:cmatrix" = "latest"
+"brew:cocoapods" = "latest"
+"brew:coreutils" = "latest"
+"brew:ffmpeg" = "latest"
+"brew:findutils" = "latest"
+"brew:gifsicle" = "latest"
+"brew:git" = "latest"
+"brew:git-extras" = "latest"
+"brew:gnupg" = "latest"
+"brew:dtan4/dtan4/k8stail" = "latest"
+"brew:less" = "latest"
+"brew:mr" = "latest"
+"brew:openconnect" = "latest"
+"brew:pinentry-mac" = "latest"
+"brew:qpdf" = "latest"
+"brew:reattach-to-user-namespace" = "latest"
+"brew:sapling" = "latest"
+"brew:gromgit/fuse/sshfs-mac" = "latest"
+"brew:tig" = "latest"
+"brew:ttygif" = "latest"
+"brew:unar" = "latest"
+"brew:watchman" = "latest"
+"brew:wget" = "latest"
+"brew:wimlib" = "latest"
+"brew:zinit" = "latest"
+"brew:zsh" = "latest"
+
+[tools]
+node = ["lts", "24", "22"]
+pnpm = "latest"
+yarn = "latest"
+"npm:@tobilu/qmd" = "latest"
+"npm:jest" = "latest"
+"npm:np" = "latest"
+"npm:npm-check-updates" = "latest"
+"npm:shardmind" = "latest"
+"npm:yarn-deduplicate" = "latest"
+
+go = "latest"
+
+cargo-binstall = "latest"
+rust = ["stable", "nightly"]
+"cargo:cargo-clean-recursive" = "latest"
+"cargo:cargo-dotenv" = "latest"
+"cargo:cargo-expand" = "latest"
+"cargo:cargo-msrv" = "latest"
+"cargo:cargo-outdated" = "latest"
+"cargo:cargo-udeps" = "latest"
+"cargo:wasm-pack" = "latest"
+
+ruby = "latest"
+
+python = "latest"
+uv = "latest"
+
+argocd = "latest"
+gcloud = { version = "latest", depends = ["python"], install_env = { CLOUDSDK_PYTHON = "{{ env.HOME }}/.local/share/mise/installs/python/latest/bin/python3" } }
+k9s = "latest"
+pulumi = "latest"
+telepresence = "latest"
+
+act = "latest"
+cmake = "latest"
+diffoci = "latest"
+gh = "latest"
+grpcurl = "latest"
+shellcheck = "latest"
+"aqua:fullstorydev/grpcui" = "latest"
+"github:iximiuz/cdebug" = "latest"
+
+atuin = "latest"
+bat = "latest"
+bottom = "latest"
+broot = "latest"
+cheat = "latest"
+delta = "latest"
+difftastic = "latest"
+dust = "latest"
+eza = "latest"
+fd = "latest"
+fx = "latest"
+fzf = "latest"
+git-lfs = "latest"
+gping = "latest"
+helix = "latest"
+hyperfine = "latest"
+jq = "latest"
+micro = "latest"
+mosh = "latest"
+neovim = "latest"
+nushell = "latest"
+pandoc = "latest"
+ripgrep = "latest"
+rtk = "latest"
+sd = "latest"
+starship = "latest"
+tlrc = "latest"
+tmux = "latest"
+tokei = "latest"
+viddy = "latest"
+websocat = "latest"
+xh = "latest"
+yq = "latest"
+yt-dlp = "latest"
+zellij = "latest"
+zoxide = "latest"
+"aqua:bensadeh/tailspin" = "latest"
+"aqua:dalance/procs" = "latest"
+"aqua:samwho/spacer" = "latest"
+"cargo:attempt-cli" = "latest"
+"github:julienXX/terminal-notifier" = "latest"
+"pypi:git-filter-repo" = "latest"
+"pypi:thefuck" = { version = "latest", python = "3.11" }
