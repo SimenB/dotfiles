@@ -43,6 +43,11 @@ Plug 'sheerun/vim-polyglot'
 Plug 'nanotee/zoxide.vim'
 call plug#end()
 
+if has('nvim')
+	lua vim.pack.add({ 'https://github.com/carldaws/miser.nvim' })
+	lua require("miser").setup({ auto_format = false })
+endif
+
 colorscheme monokai
 
 " Make Vim more useful
