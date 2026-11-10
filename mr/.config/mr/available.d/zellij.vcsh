@@ -1,2 +1,0 @@
-[$HOME/.config/vcsh/repo.d/zellij.git]
-checkout = vcsh clone git@github.com:SimenB/vcsh_zellij.git zellij

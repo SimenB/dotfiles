@@ -1,2 +1,0 @@
-[$HOME/.config/vcsh/repo.d/mr.git]
-checkout = vcsh clone git@github.com:SimenB/vcsh_mr.git mr
