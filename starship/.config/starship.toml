@@ -27,3 +27,6 @@ pipestatus = true
 
 [time]
 disabled = false
+
+[mise]
+disabled = false
