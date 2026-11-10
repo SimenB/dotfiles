@@ -1,0 +1,29 @@
+"$schema" = 'https://starship.rs/config-schema.json'
+
+[[battery.display]]
+threshold = 50
+
+[directory]
+# In practice, never truncate (it will still truncate to repo root)
+truncation_length = 100
+
+[gcloud]
+disabled = true
+
+[git_status]
+# without $stashed
+format = '([\[$conflicted$deleted$renamed$modified$staged$untracked$ahead_behind\]]($style) )'
+ahead = "⇡${count}"
+diverged = "⇕⇡${ahead_count}⇣${behind_count}"
+behind = "⇣${count}"
+
+[hostname]
+ssh_only = true
+
+[status]
+disabled = false
+map_symbol = true
+pipestatus = true
+
+[time]
+disabled = false
