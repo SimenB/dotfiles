@@ -24,6 +24,15 @@ dotfile_groups = ["bat", "functions", "ghostty", "git", "gpg", "iterm2", "karabi
 [bootstrap.mise_shell_activate]
 zsh = true
 
+[bootstrap.macos.launchd.agents.mr-update]
+program = "~/.scripts/mr-daily"
+# launchd's PATH has no mise activation, so the shims put mise tools such as terminal-notifier on it.
+# Ignoring ~/repos keeps the shims on the global tools: a clone's untrusted mise.toml would fail them.
+environment = { PATH = "{{ env.HOME }}/.scripts:{{ env.HOME }}/.local/share/mise/shims:/opt/homebrew/bin:/usr/bin:/bin:/usr/sbin:/sbin", MISE_IGNORED_CONFIG_PATHS = "{{ env.HOME }}/repos" }
+start_calendar_interval = { hour = 7, minute = 0 }
+stdout_path = "~/Library/Logs/mr-update/launchd.log"
+stderr_path = "~/Library/Logs/mr-update/launchd.log"
+
 [dotfile_groups.iterm2]
 root = "iterm2"
 # iTerm2 rewrites its plist on save, which would replace a symlink
