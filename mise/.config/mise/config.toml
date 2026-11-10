@@ -9,7 +9,7 @@ github.credential_command = "gh auth token"
 dotfiles.root = "~/repos/dotfiles"
 
 [bootstrap]
-dotfile_groups = ["bat", "functions", "ghostty", "git", "gpg", "iterm2", "karabiner", "mise", "mise-work", "mr", "nano", "ripgrep", "scripts", "tmux", "urxvt", "vim", "zellij", "zsh"]
+dotfile_groups = ["bat", "functions", "ghostty", "git", "gpg", "iterm2", "karabiner", "mise-work", "mr", "nano", "ripgrep", "scripts", "tmux", "urxvt", "vim", "zellij", "zsh"]
 
 [bootstrap.repos]
 "~/.oh-my-zsh" = { url = "https://github.com/ohmyzsh/ohmyzsh.git" }
@@ -19,20 +19,25 @@ dotfile_groups = ["bat", "functions", "ghostty", "git", "gpg", "iterm2", "karabi
 "~/.zsh/zsh-autosuggestions" = { url = "git@github.com:zsh-users/zsh-autosuggestions" }
 "~/.zsh/zsh-history-substring-search" = { url = "git@github.com:zsh-users/zsh-history-substring-search" }
 "~/.zsh/zsh-syntax-highlighting" = { url = "git@github.com:zsh-users/zsh-syntax-highlighting.git" }
+"~/repos/dotfiles-work" = { url = "git@github.com:SimenB/dotfiles-work.git" }
 
 [bootstrap.mise_shell_activate]
 zsh = true
 
 [dotfile_groups.iterm2]
 root = "iterm2"
+# iTerm2 rewrites its plist on save, which would replace a symlink
 mode = "copy"
 
 [dotfile_groups.karabiner]
 root = "karabiner"
+# Karabiner rewrites karabiner.json on save, which would replace a symlink
 mode = "copy"
 
 [dotfile_groups.mise-work]
 root = "~/repos/dotfiles-work/mise"
+# ~/.config/mise links into this repo, and mise won't deploy through that link
+target = "~/repos/dotfiles/mise"
 
 [dotfiles]
 "~/.config/starship.toml" = { source = "~/repos/dotfiles/starship/.config/starship.toml", mode = "template" }
