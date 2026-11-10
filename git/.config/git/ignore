@@ -10,3 +10,4 @@ Thumbs.db
 .fleet/
 **/.claude/settings.local.json
 **/.claude/worktrees
+mise.local.toml
