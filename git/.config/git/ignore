@@ -1,0 +1,12 @@
+.DS\_Store
+*.sw?
+*~
+Desktop.ini
+._*
+Thumbs.db
+.Trashes
+.idea/
+*.iml
+.fleet/
+**/.claude/settings.local.json
+**/.claude/worktrees
