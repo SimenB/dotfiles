@@ -50,6 +50,42 @@ alias cloc='echo use tokei; return 1;'
 alias nvm='echo use mise; return 1;'
 alias fnm='echo use mise; return 1;'
 
+npm() {
+  if [[ ($1 == install || $1 == i || $1 == add) && (${@[(Ie)-g]} -gt 0 || ${@[(Ie)--global]} -gt 0) ]]; then
+    echo 'use mise: `mise use -g npm:<package>`'
+    return 1
+  fi
+  command npm "$@"
+}
+
+cargo() {
+  if [[ $1 == install && ${@[(Ie)--list]} -eq 0 ]]; then
+    echo 'use mise: `mise use -g cargo:<crate>`'
+    return 1
+  fi
+  command cargo "$@"
+}
+
+# Inside a virtualenv, pip install is the normal way to add packages.
+pip() { _pip_guard pip "$@"; }
+pip3() { _pip_guard pip3 "$@"; }
+_pip_guard() {
+  local cmd=$1; shift
+  if [[ $1 == install && -z $VIRTUAL_ENV ]]; then
+    echo 'use mise: `mise use -g pypi:<package>`, or a project venv'
+    return 1
+  fi
+  command $cmd "$@"
+}
+
+brew() {
+  if [[ $1 == install ]]; then
+    echo 'use mise: declare "brew:<formula>" or "brew-cask:<cask>" in [bootstrap.packages], then `mise bootstrap packages apply`'
+    return 1
+  fi
+  command brew "$@"
+}
+
 alias http='echo use xh; return 1;'
 
 alias tree='echo use br \(broot\); return 1;'
