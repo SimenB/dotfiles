@@ -1,0 +1,8 @@
+{
+  "plugins": {
+    "miser.nvim": {
+      "rev": "096c89879967564e4a348e182fa9703ee77b4efe",
+      "src": "https://github.com/carldaws/miser.nvim"
+    }
+  }
+}
