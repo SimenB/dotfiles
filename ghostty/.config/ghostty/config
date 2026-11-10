@@ -8,6 +8,8 @@ cursor-click-to-move = true
 mouse-hide-while-typing = true
 mouse-scroll-multiplier = 3
 
+quick-terminal-screen = mouse
+
 keybind = ctrl+b>shift+n=new_tab
 keybind = ctrl+b>n=next_tab
 keybind = ctrl+b>-=new_split:down
