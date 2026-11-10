@@ -30,3 +30,7 @@ disabled = false
 
 [mise]
 disabled = false
+{% set work = get_env(name="HOME") ~ "/repos/dotfiles-work/edits/starship.toml" %}
+{% if work is file %}
+{{ read_file(path=work) }}
+{%- endif %}
