@@ -95,7 +95,6 @@
 	force-pop		= !git stash show -p | git apply && git stash drop
 	satsh			= stash
 	githubprofile		= !git config user.name \"Simen Bekkhus\" && git config user.email \"sbekkhus91@gmail.com\"
-	workprofile		= !git config user.name \"Simen Bekkhus\" && git config user.email \"***REMOVED***\" && git config commit.gpgsign false
 	stash			= stash --no-gpg-sign
 	diff-copy		= !git --no-pager diff | pbcopy
 	commit-copy		= !git --no-pager diff HEAD^ | pbcopy
@@ -145,4 +144,6 @@
 [column]
 	ui = auto
 [safe]
-	bareRepository = explicit
+	bareRepository = all
+[include]
+	path = ~/.config/git/work
