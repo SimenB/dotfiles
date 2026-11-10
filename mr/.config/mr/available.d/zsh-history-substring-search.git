@@ -1,0 +1,2 @@
+[$HOME/.zsh/zsh-history-substring-search]
+checkout = git clone git@github.com:zsh-users/zsh-history-substring-search zsh-history-substring-search

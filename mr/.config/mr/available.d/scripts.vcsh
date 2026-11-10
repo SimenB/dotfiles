@@ -1,0 +1,2 @@
+[$HOME/.config/vcsh/repo.d/scripts.git]
+checkout = vcsh clone git@github.com:SimenB/vcsh_scripts.git scripts
